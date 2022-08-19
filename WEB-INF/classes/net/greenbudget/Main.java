@@ -1,9 +1,5 @@
 package net.greenbudget;
 
-import net.greenbudget.db.Db;
-import net.greenbudget.db.methods.DbConnection;
-import net.greenbudget.form.Form;
-import net.greenbudget.form.RegisterUser;
 import net.greenbudget.servlets.RegisterServlet;
 
 public class Main {
