@@ -10,13 +10,7 @@ public class DbConfig {
     private final  String DB_DRIVER = dotenv.get("DB_DRIVER");
     private final  String DB_URL = dotenv.get("DB_URL");
 
-    private static DbConfig instance;
-
-    private DbConfig(){}
-
-    public static DbConfig getInstance(){
-        return instance = instance == null ? new DbConfig() : null;
-    }
+    private final  String HOST = dotenv.get("HOST");
 
 
     public String getUsername(){
@@ -33,6 +27,10 @@ public class DbConfig {
 
     public String getUrl(){
         return DB_URL;
+    }
+
+    public String getHost(){
+        return HOST;
     }
 
 }

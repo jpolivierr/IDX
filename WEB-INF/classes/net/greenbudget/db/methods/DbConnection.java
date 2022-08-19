@@ -9,7 +9,7 @@ import java.sql.Statement;
 import net.greenbudget.Config.DbConfig;
 
 public class DbConnection {
-    DbConfig dbConfig = DbConfig.getInstance();
+    DbConfig dbConfig = new DbConfig();
 
     private final String USER = dbConfig.getUsername();
     private final String PWD = dbConfig.getPwd();
