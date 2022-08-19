@@ -1,0 +1,10 @@
+# ignore ALL files
+*.log
+*.env
+*/web.xml
+
+.idea
+# ignore ALL files in ANY directory named temp
+temp/ 
+.vscode/
+.idea/
