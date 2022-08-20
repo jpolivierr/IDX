@@ -5,6 +5,8 @@ import net.greenbudget.form.Form;
 public interface Database {
 
     public void NewUser(Form form);
+
+    public void fetchAccount(String email);
     
     // public void createTable(DbConnection dbConnection);
 

@@ -12,6 +12,12 @@ public class DbConfig {
 
     private final  String HOST = dotenv.get("HOST");
 
+    private final String QUERY_GET_ACCOUNT = dotenv.get("QUERY_GET_ACCOUNT");
+
+
+    public String getQueryGetAccount(){
+        return QUERY_GET_ACCOUNT;
+    }
 
     public String getUsername(){
         return DB_USERNAME;
