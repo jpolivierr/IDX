@@ -3,7 +3,9 @@ package net.greenbudget.db;
 import net.greenbudget.db.methods.AddExpenses;
 import net.greenbudget.db.methods.CreateNewUser;
 import net.greenbudget.db.methods.DbConnection;
+import net.greenbudget.db.methods.DeleteExpenses;
 import net.greenbudget.db.methods.GetAccount;
+import net.greenbudget.db.methods.UpdateExpenses;
 import net.greenbudget.responseData.RegisterUser;
 import net.greenbudget.responseData.UserExpenses;
 
@@ -37,10 +39,23 @@ public class Db implements Database {
         System.out.println(addExpenses.init(this.connection, userEmail, expenses));
     }
 
+    // update expenses
+    @Override
+    public void updateExpenses(String newName, String userEmail, UserExpenses expenses){
+        UpdateExpenses updateExpenses = UpdateExpenses.getInstance();
+        System.out.println(updateExpenses.init(this.connection, newName, userEmail, expenses));
+    }
+
+    // delete expenses
+    @Override
+    public void deleteExpenses(String name, String userEmail){
+        DeleteExpenses deleteExpenses = DeleteExpenses.getInstance();
+        System.out.println(deleteExpenses.init(this.connection, name, userEmail));
+    }
+
     public static void main(String[] args){
         var db = new Db();
-        var expenses = new UserExpenses("Rent", "monthly", "bill","2022:09:01 12:00:00","2022:08:20 12:00:00", 956.00);
-        db.addExpenses("olivierjp06@outlook.com", expenses);;
+        db.deleteExpenses("Light Bill","olivierjp06@outlook.com");
     }
     
 }

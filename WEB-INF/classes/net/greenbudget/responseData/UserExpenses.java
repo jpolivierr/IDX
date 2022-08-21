@@ -1,7 +1,5 @@
 package net.greenbudget.responseData;
 
-import java.util.HashMap;
-
 public class UserExpenses {
 
     private String name;
