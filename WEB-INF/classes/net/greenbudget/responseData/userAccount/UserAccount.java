@@ -14,7 +14,5 @@ public class UserAccount extends ResponseData {
                       {
         this.userInfo = userInfo.build();
     }
-
-
     
 }

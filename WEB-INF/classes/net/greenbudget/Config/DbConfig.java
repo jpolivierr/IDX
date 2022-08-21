@@ -13,7 +13,12 @@ public class DbConfig {
     private final  String HOST = dotenv.get("HOST");
 
     private final String QUERY_GET_ACCOUNT = dotenv.get("QUERY_GET_ACCOUNT");
+    private final String QUERY_ADD_EXPENSES = dotenv.get("QUERY_ADD_EXPENSES");
 
+
+    public String getQueryAddExpenses(){
+        return QUERY_ADD_EXPENSES;
+    }
 
     public String getQueryGetAccount(){
         return QUERY_GET_ACCOUNT;

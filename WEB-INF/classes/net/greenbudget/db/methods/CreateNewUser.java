@@ -2,7 +2,7 @@ package net.greenbudget.db.methods;
 
 import java.sql.Connection;
 
-import net.greenbudget.form.Form;
+import net.greenbudget.responseData.Form;
 
 public class CreateNewUser {
 

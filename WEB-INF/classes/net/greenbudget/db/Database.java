@@ -1,6 +1,6 @@
 package net.greenbudget.db;
 
-import net.greenbudget.form.Form;
+import net.greenbudget.responseData.Form;
 
 public interface Database {
 

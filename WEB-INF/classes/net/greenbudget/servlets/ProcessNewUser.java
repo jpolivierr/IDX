@@ -8,8 +8,8 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import net.greenbudget.db.Db;
-import net.greenbudget.form.Form;
-import net.greenbudget.form.RegisterUser;
+import net.greenbudget.responseData.Form;
+import net.greenbudget.responseData.RegisterUser;
 import net.greenbudget.validator.InputValidator;
 
 public class ProcessNewUser {

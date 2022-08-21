@@ -3,9 +3,9 @@ package net.greenbudget.validator;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.regex.*;    
+import java.util.regex.*;
 
-import net.greenbudget.form.Form;
+import net.greenbudget.responseData.Form;
 
 public class InputValidator{
 

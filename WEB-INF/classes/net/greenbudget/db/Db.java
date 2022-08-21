@@ -3,7 +3,7 @@ package net.greenbudget.db;
 import net.greenbudget.db.methods.CreateNewUser;
 import net.greenbudget.db.methods.DbConnection;
 import net.greenbudget.db.methods.GetAccount;
-import net.greenbudget.form.Form;
+import net.greenbudget.responseData.Form;
 
 public class Db implements Database {
 

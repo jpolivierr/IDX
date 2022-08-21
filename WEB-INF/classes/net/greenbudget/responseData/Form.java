@@ -1,4 +1,4 @@
-package net.greenbudget.form;
+package net.greenbudget.responseData;
 
 import java.util.HashMap;
 
