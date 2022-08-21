@@ -1,4 +1,4 @@
-package net.greenbudget.responseData.userAccount;
+package net.greenbudget.responseData;
 
 import java.util.HashMap;
 

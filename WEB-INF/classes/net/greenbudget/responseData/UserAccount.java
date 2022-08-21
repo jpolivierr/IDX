@@ -1,8 +1,6 @@
-package net.greenbudget.responseData.userAccount;
+package net.greenbudget.responseData;
 
 import java.util.HashMap;
-
-import net.greenbudget.responseData.ResponseData;
 
 public class UserAccount extends ResponseData {
  

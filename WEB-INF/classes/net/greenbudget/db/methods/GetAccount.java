@@ -4,8 +4,8 @@ import java.sql.Connection;
 
 import net.greenbudget.Config.DbConfig;
 import net.greenbudget.response.Response;
-import net.greenbudget.responseData.userAccount.UserAccount;
-import net.greenbudget.responseData.userAccount.UserInfo;
+import net.greenbudget.responseData.UserAccount;
+import net.greenbudget.responseData.UserInfo;
 
 public class GetAccount {
 
