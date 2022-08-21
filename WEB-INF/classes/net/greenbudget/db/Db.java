@@ -25,7 +25,13 @@ public class Db implements Database {
     @Override
     public void fetchAccount(String email){
         GetAccount getAccount = GetAccount.getInstance();
-        getAccount.init(this.connection, email);
+        System.out.println(getAccount.init(this.connection, email)); 
+    }
+
+    // add expenses
+    @Override
+    public void addExpenses(String expName, String email){
+
     }
 
     public static void main(String[] args){

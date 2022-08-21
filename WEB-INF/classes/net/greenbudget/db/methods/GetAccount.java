@@ -3,6 +3,9 @@ package net.greenbudget.db.methods;
 import java.sql.Connection;
 
 import net.greenbudget.Config.DbConfig;
+import net.greenbudget.response.Response;
+import net.greenbudget.responseData.userAccount.UserAccount;
+import net.greenbudget.responseData.userAccount.UserInfo;
 
 public class GetAccount {
 
@@ -14,10 +17,11 @@ public class GetAccount {
         return instance = instance == null ? new GetAccount() : null;
     }
 
-    public void init(DbConnection dbConnection, String email){
+    public String init(DbConnection dbConnection, String userEmail){
 
         //Get the connection
         Connection connection = dbConnection.connect();
+        String response = null;
 
         try {
             // get the Query string form .env
@@ -26,17 +30,27 @@ public class GetAccount {
             //create prepare statement
             dbConnection.pstmt = connection.prepareStatement(query);
 
-            dbConnection.pstmt.setString(1, email);                
+            dbConnection.pstmt.setString(1, userEmail);                
             // get the result set from database
             var result = dbConnection.pstmt.executeQuery();
 
             while(result.next()){
-                System.out.println(result.getString("first_name"));
+
+                String firstName = result.getString("first_name");
+                String lastName = result.getString("last_name");
+                String email= result.getString("email");
+
+                var userInfo = new UserInfo(firstName, lastName, email);
+                var userAccount = new UserAccount(userInfo);
+                var jsonResponse = new Response(200, "success", userAccount);
+                response = jsonResponse.send();
             }
 
             
         } catch (Exception e) {
-            e.printStackTrace();
+
+            var jsonResponse = new Response(300, e.getMessage(), null);
+                response = jsonResponse.send();
         }finally{
             try {
                 connection.close();
@@ -44,5 +58,7 @@ public class GetAccount {
                 e.printStackTrace();
             }
         }
+
+        return response;
     }
 }
