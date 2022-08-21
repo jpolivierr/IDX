@@ -1,9 +1,11 @@
 package net.greenbudget.db;
 
+import net.greenbudget.db.methods.AddExpenses;
 import net.greenbudget.db.methods.CreateNewUser;
 import net.greenbudget.db.methods.DbConnection;
 import net.greenbudget.db.methods.GetAccount;
-import net.greenbudget.responseData.Form;
+import net.greenbudget.responseData.RegisterUser;
+import net.greenbudget.responseData.UserExpenses;
 
 public class Db implements Database {
 
@@ -16,7 +18,7 @@ public class Db implements Database {
 
     // Create a new user
     @Override
-    public void NewUser(Form newUserForm){
+    public void NewUser(RegisterUser newUserForm){
         CreateNewUser newUser = CreateNewUser.getInstance();
         newUser.singleRecord(this.connection, newUserForm);
     }
@@ -30,13 +32,15 @@ public class Db implements Database {
 
     // add expenses
     @Override
-    public void addExpenses(String expName, String email){
-
+    public void addExpenses(String userEmail, UserExpenses expenses){
+        AddExpenses addExpenses = AddExpenses.getInstance();
+        System.out.println(addExpenses.init(this.connection, userEmail, expenses));
     }
 
     public static void main(String[] args){
         var db = new Db();
-        db.fetchAccount("olivierjp06@outlook.com");
+        var expenses = new UserExpenses("Rent", "monthly", "bill","2022:09:01 12:00:00","2022:08:20 12:00:00", 956.00);
+        db.addExpenses("olivierjp06@outlook.com", expenses);;
     }
     
 }

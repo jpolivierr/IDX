@@ -14,7 +14,16 @@ public class DbConfig {
 
     private final String QUERY_GET_ACCOUNT = dotenv.get("QUERY_GET_ACCOUNT");
     private final String QUERY_ADD_EXPENSES = dotenv.get("QUERY_ADD_EXPENSES");
+    private final String QUERY_CREATE_NEW_USER = dotenv.get("QUERY_CREATE_NEW_USER");
+    private final String QUERY_UPDATE_EXPENSES = dotenv.get("QUERY_UPDATE_EXPENSES");
 
+    public String getQueryUpdateExpenses(){
+        return QUERY_UPDATE_EXPENSES ;
+    }
+
+    public String getQueryCreateNewUser(){
+        return QUERY_CREATE_NEW_USER;
+    }
 
     public String getQueryAddExpenses(){
         return QUERY_ADD_EXPENSES;

@@ -3,6 +3,8 @@ package net.greenbudget.db.methods;
 import java.sql.Connection;
 
 import net.greenbudget.Config.DbConfig;
+import net.greenbudget.response.Response;
+import net.greenbudget.responseData.UserExpenses;
 
 public class AddExpenses {
     
@@ -14,7 +16,7 @@ public class AddExpenses {
         return instance = instance == null ? new AddExpenses() : null;
     }
 
-    public String init(DbConnection dbConnection,String expName, String userEmail){
+    public String init(DbConnection dbConnection, String userEmail, UserExpenses expenses){
 
         //Get the connection
         Connection connection = dbConnection.connect();
@@ -27,21 +29,19 @@ public class AddExpenses {
             //create prepare statement
             dbConnection.pstmt = connection.prepareStatement(query);
 
-            dbConnection.pstmt.setString(1, userEmail);                
-            // get the result set from database
-            var result = dbConnection.pstmt.executeQuery();
+            dbConnection.pstmt.setString(1, expenses.getName());
+            dbConnection.pstmt.setString(2, expenses.getFrequency());
+            dbConnection.pstmt.setString(3, expenses.getCategory());
+            dbConnection.pstmt.setString(4, expenses.getDueDate());
+            dbConnection.pstmt.setDouble(5, expenses.getAmount());
+            dbConnection.pstmt.setString(6, expenses.getClientDate());
+            dbConnection.pstmt.setString(7, userEmail);  
+            
+            dbConnection.pstmt.execute();
 
-            while(result.next()){
-
-                String firstName = result.getString("first_name");
-                String lastName = result.getString("last_name");
-                String email= result.getString("email");
-
-                var userInfo = new UserInfo(firstName, lastName, email);
-                var userAccount = new UserAccount(userInfo);
-                var jsonResponse = new Response(200, "success", userAccount);
+            var jsonResponse = new Response(200, "Expenses added.", null);
+            //assign response
                 response = jsonResponse.send();
-            }
 
             
         } catch (Exception e) {
