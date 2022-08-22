@@ -6,38 +6,26 @@ import java.sql.SQLException;
 import net.greenbudget.Config.DbConfig;
 import net.greenbudget.response.Response;
 
-public class DeleteExpenses {
-    private static DeleteExpenses instance;
+public class DeleteUser {
+    private static DeleteUser instance;
 
-    private DeleteExpenses(){}
+    private DeleteUser(){}
 
-    public static DeleteExpenses getInstance(){
-        return instance = instance == null ? new DeleteExpenses() : null;
+    public static DeleteUser getInstance(){
+        return instance = instance == null ? new DeleteUser() : null;
     }
 
-    public String init(DbConnection dbConnection, String name, String userEmail){
-
-        //Get the connection
+    public String init(DbConnection dbConnection, String email){
         Connection connection = dbConnection.connect();
         String response = null;
-
         try {
-            // get the Query string form .env
-            String query = new DbConfig().getQueryDeleteExpenses();
-
-            //create prepare statement
+            String query = new DbConfig().getQueryDeleteUser();
             dbConnection.pstmt = connection.prepareStatement(query);
-
-            dbConnection.pstmt.setString(1, name);
-            dbConnection.pstmt.setString(2, userEmail); 
-            
-            dbConnection.pstmt.execute();
-
-             //Create a responses
-            var jsonResponse = new Response(200, "Expenses Deleted.", null);
+            dbConnection.pstmt.setString(1,  email);
+            dbConnection.pstmt.executeUpdate();
+            var jsonResponse = new Response(200, "User deleted.", null);
             //assign response
                 response = jsonResponse.send();
-
             
         }catch (SQLException e) {
             //Create a responses
@@ -63,4 +51,5 @@ public class DeleteExpenses {
 
         return response;
     }
+    
 }

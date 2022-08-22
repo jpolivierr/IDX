@@ -1,9 +1,11 @@
 package net.greenbudget.db.methods;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 
 import net.greenbudget.Config.DbConfig;
-import net.greenbudget.responseData.RegisterUser;
+import net.greenbudget.response.Response;
+import net.greenbudget.responseData.UserData;
 
 public class CreateNewUser {
 
@@ -15,8 +17,9 @@ public class CreateNewUser {
         return instance = instance == null ? new CreateNewUser() : null;
     }
 
-    public void singleRecord(DbConnection dbConnection, RegisterUser user){
+    public String singleRecord(DbConnection dbConnection, UserData user){
         Connection connection = dbConnection.connect();
+        String response =null;
         try {
             String query = new DbConfig().getQueryCreateNewUser();
             dbConnection.pstmt = connection.prepareStatement(query);
@@ -25,10 +28,25 @@ public class CreateNewUser {
             dbConnection.pstmt.setString(3, user.getemail());                
             dbConnection.pstmt.setString(4, user.getpassword());
             dbConnection.pstmt.executeUpdate();
-            System.out.println("record inserted..");
+            //Create a responses
+            var jsonResponse = new Response(200, "User Created", null);
+            //assign response
+                response = jsonResponse.send();
             
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (SQLException e) {
+             //Create a responses
+             var jsonResponse = new Response(406, DbExceptionHandler.Message(e.getErrorCode(),e.getMessage()), null);
+
+             //assign response
+             response = jsonResponse.send();
+
+        }catch(Exception e){
+            //Create a responses
+            var jsonResponse = new Response(406, e.getMessage(), null);
+
+            //assign response
+            response = jsonResponse.send();
+
         }finally{
             try {
                 connection.close();
@@ -36,6 +54,8 @@ public class CreateNewUser {
                 e.printStackTrace();
             }
         }
+
+        return response;
     }
     
 }

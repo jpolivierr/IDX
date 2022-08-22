@@ -8,7 +8,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import net.greenbudget.db.Db;
-import net.greenbudget.responseData.RegisterUser;
+import net.greenbudget.responseData.UserData;
 import net.greenbudget.validator.InputValidator;
 
 public class ProcessNewUser {
@@ -21,7 +21,7 @@ public class ProcessNewUser {
         String password = req.getParameter("password");
         String password2 = req.getParameter("password2");
 
-        var user = new RegisterUser(firstName, lastName , email , password , password2);
+        var user = new UserData(firstName, lastName , email , password , password2);
 
         if(InputValidator.validate(user).length > 0){
                 String[] list = InputValidator.validate(user);
@@ -36,11 +36,8 @@ public class ProcessNewUser {
                 req.getRequestDispatcher("/userRegister.jsp").forward(req, resp);
         }else{
 
-                var newUserForm = new RegisterUser(firstName, lastName, email, password, password2);
-
                 var db = new Db();
-
-                db.NewUser(newUserForm);
+                db.NewUser(user);
                 resp.sendRedirect("/green-budget/account.jsp");
         }
 

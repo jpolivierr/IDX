@@ -1,6 +1,7 @@
 package net.greenbudget.db.methods;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 
 import net.greenbudget.Config.DbConfig;
 import net.greenbudget.response.Response;
@@ -45,11 +46,21 @@ public class UpdateExpenses {
                 response = jsonResponse.send();
 
             
-        } catch (Exception e) {
+        }catch (SQLException e) {
+            //Create a responses
+            var jsonResponse = new Response(406, DbExceptionHandler.Message(e.getErrorCode(),e.getMessage()), null);
 
-            var jsonResponse = new Response(300, e.getMessage(), null);
-                response = jsonResponse.send();
-        }finally{
+            //assign response
+            response = jsonResponse.send();
+
+       }catch(Exception e){
+           //Create a responses
+           var jsonResponse = new Response(406, e.getMessage(), null);
+
+           //assign response
+           response = jsonResponse.send();
+
+       }finally{
             try {
                 connection.close();
             } catch (Exception e) {

@@ -1,19 +1,26 @@
 package net.greenbudget.db;
 
-import net.greenbudget.responseData.RegisterUser;
+import net.greenbudget.responseData.UserData;
 import net.greenbudget.responseData.UserExpenses;
 
 public interface Database {
 
-    public void NewUser(RegisterUser form);
+    public String NewUser(UserData form);
 
-    public void fetchAccount(String email);
+    public String updateUser(String newEmail, UserData user);
 
-    public void addExpenses(String email, UserExpenses expenses);
+    public String deleteUser(String email);
 
-    public void updateExpenses(String newName, String email, UserExpenses expenses);
+    public String fetchAccount(String email);
 
-    public void deleteExpenses(String name, String email);
+    public String addExpenses(String email, UserExpenses expenses);
+
+    public String updateExpenses(String newName, String email, UserExpenses expenses);
+
+    public String deleteExpenses(String name, String email);
+
+    
+    
     
     // public void createTable(DbConnection dbConnection);
 

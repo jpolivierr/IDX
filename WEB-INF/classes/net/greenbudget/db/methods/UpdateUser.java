@@ -5,39 +5,34 @@ import java.sql.SQLException;
 
 import net.greenbudget.Config.DbConfig;
 import net.greenbudget.response.Response;
+import net.greenbudget.responseData.UserData;
 
-public class DeleteExpenses {
-    private static DeleteExpenses instance;
+public class UpdateUser {
+    
+    private static UpdateUser instance;
 
-    private DeleteExpenses(){}
+    private UpdateUser(){}
 
-    public static DeleteExpenses getInstance(){
-        return instance = instance == null ? new DeleteExpenses() : null;
+    public static UpdateUser getInstance(){
+        return instance = instance == null ? new UpdateUser() : null;
     }
 
-    public String init(DbConnection dbConnection, String name, String userEmail){
-
-        //Get the connection
+    public String init(DbConnection dbConnection, String newEmail, UserData user){
         Connection connection = dbConnection.connect();
         String response = null;
-
         try {
-            // get the Query string form .env
-            String query = new DbConfig().getQueryDeleteExpenses();
-
-            //create prepare statement
+            String query = new DbConfig().getQueryUpdateUser();
             dbConnection.pstmt = connection.prepareStatement(query);
+            dbConnection.pstmt.setString(1,  user.getFirstName());
+            dbConnection.pstmt.setString(2, user.getlastName());
+            dbConnection.pstmt.setString(3, newEmail);                
+            dbConnection.pstmt.setString(4, user.getemail());
+            dbConnection.pstmt.executeUpdate();
 
-            dbConnection.pstmt.setString(1, name);
-            dbConnection.pstmt.setString(2, userEmail); 
-            
-            dbConnection.pstmt.execute();
 
-             //Create a responses
-            var jsonResponse = new Response(200, "Expenses Deleted.", null);
+            var jsonResponse = new Response(200, "User updated.", null);
             //assign response
                 response = jsonResponse.send();
-
             
         }catch (SQLException e) {
             //Create a responses
@@ -63,4 +58,5 @@ public class DeleteExpenses {
 
         return response;
     }
+    
 }
