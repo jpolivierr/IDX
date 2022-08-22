@@ -22,7 +22,7 @@ public class DeleteUser {
             String query = new DbConfig().getQueryDeleteUser();
             dbConnection.pstmt = connection.prepareStatement(query);
             dbConnection.pstmt.setString(1,  email);
-            dbConnection.pstmt.executeUpdate();
+            dbConnection.pstmt.execute();
             var jsonResponse = new Response(200, "User deleted.", null);
             //assign response
                 response = jsonResponse.send();

@@ -71,8 +71,16 @@ public class Db implements Database {
 
     public static void main(String[] args){
         var db = new Db();
-        var user = new UserData("Frederic", "Olivier", null, "Carnaval2", null);
-        System.out.println(db.deleteUser("jpolivie@gmail.com"));
+        var user = new UserData("Karine", "Olivier", "kne@gmail.com", "Carnaval2", null);
+
+        //create user
+        // System.out.println(db.NewUser(user));
+
+        //update user 
+        System.out.println(db.updateUser("karineolivier@gmail.com", user));
+
+        //Delete user
+        // System.out.println(db.deleteUser("jpolivierr@gmailcom"));
     }
-    
+
 }
