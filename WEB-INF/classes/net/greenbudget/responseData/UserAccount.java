@@ -4,15 +4,13 @@ import java.util.HashMap;
 
 public class UserAccount extends ResponseData {
  
-    private HashMap<String,String> userInfo;
+    private UserInfo userInfo;
 
     public UserAccount(
                         UserInfo userInfo
                       )
                       {
-        this.userInfo = userInfo.build();
+        this.userInfo = userInfo;
     }
-
-    
     
 }

@@ -5,34 +5,46 @@ import java.sql.SQLException;
 
 import net.greenbudget.Config.DbConfig;
 import net.greenbudget.response.Response;
-import net.greenbudget.responseData.RegisterUserData;
+import net.greenbudget.responseData.UserInfo;
 
-public class UpdateUser {
-    
-    private static UpdateUser instance;
+public class GetUser {
 
-    private UpdateUser(){}
+    private static GetUser instance;
 
-    public static UpdateUser getInstance(){
-        return instance = instance == null ? new UpdateUser() : null;
+    private GetUser(){}
+
+    public static GetUser getInstance(){
+        return instance = instance == null ? new GetUser() : null;
     }
 
-    public String init(DbConnection dbConnection, String newEmail, RegisterUserData user){
+    public String init(DbConnection dbConnection, String userEmail){
+
+        //Get the connection
         Connection connection = dbConnection.connect();
         String response = null;
+
         try {
-            String query = new DbConfig().getQueryUpdateUser();
+            // get the Query string form .env
+            String query = new DbConfig().getQueryGetAccount();
+
+            //create prepare statement
             dbConnection.pstmt = connection.prepareStatement(query);
-            dbConnection.pstmt.setString(1,  user.getFirstName());
-            dbConnection.pstmt.setString(2, user.getlastName());
-            dbConnection.pstmt.setString(3, newEmail);                
-            dbConnection.pstmt.setString(4, user.getemail());
-            dbConnection.pstmt.executeUpdate();
 
+            dbConnection.pstmt.setString(1, userEmail);                
+            // get the result set from database
+            var result = dbConnection.pstmt.executeQuery();
 
-            var jsonResponse = new Response(200, "User updated.", null);
-            //assign response
+            while(result.next()){
+                String firstName = result.getString("first_name");
+                String lastName = result.getString("last_name");
+                String email= result.getString("email");
+
+                var userInfo = new UserInfo(firstName, lastName, email);
+
+                var jsonResponse = new Response(200, "success", userInfo);
                 response = jsonResponse.send();
+            }
+
             
         }catch (SQLException e) {
             //Create a responses
@@ -58,5 +70,4 @@ public class UpdateUser {
 
         return response;
     }
-    
 }

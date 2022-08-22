@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 import net.greenbudget.Config.DbConfig;
 import net.greenbudget.response.Response;
-import net.greenbudget.responseData.UserData;
+import net.greenbudget.responseData.RegisterUserData;
 
 public class CreateNewUser {
 
@@ -17,7 +17,7 @@ public class CreateNewUser {
         return instance = instance == null ? new CreateNewUser() : null;
     }
 
-    public String singleRecord(DbConnection dbConnection, UserData user){
+    public String singleRecord(DbConnection dbConnection, RegisterUserData user){
         Connection connection = dbConnection.connect();
         String response =null;
         try {

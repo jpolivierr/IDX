@@ -1,13 +1,15 @@
 package net.greenbudget.db;
 
-import net.greenbudget.responseData.UserData;
+import net.greenbudget.responseData.RegisterUserData;
 import net.greenbudget.responseData.UserExpenses;
 
 public interface Database {
 
-    public String NewUser(UserData form);
+    public String NewUser(RegisterUserData form);
 
-    public String updateUser(String newEmail, UserData user);
+    public String fetchUser(String form);
+
+    public String updateUser(String newEmail, RegisterUserData user);
 
     public String deleteUser(String email);
 

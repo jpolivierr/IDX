@@ -21,6 +21,11 @@ public class DbConfig {
     private final String QUERY_CREATE_NEW_USER = dotenv.get("QUERY_CREATE_NEW_USER");
     private final String QUERY_DELETE_USER = dotenv.get("QUERY_DELETE_USER");
     private final String QUERY_UPDATE_USER = dotenv.get("QUERY_UPDATE_USER");
+    private final String QUERY_GET_USER = dotenv.get("QUERY_GET_USER");
+
+    public String getQueryGetUser(){
+        return QUERY_GET_USER ;
+    }
 
     public String getQueryUpdateUser(){
         return QUERY_UPDATE_USER ;

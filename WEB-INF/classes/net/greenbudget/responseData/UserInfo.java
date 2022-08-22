@@ -2,9 +2,8 @@ package net.greenbudget.responseData;
 
 import java.util.HashMap;
 
-public class UserInfo {
+public class UserInfo extends ResponseData{
 
-    private HashMap<String,String> userObj;
     private String firstName;
     private String lastName;
     private String email;
@@ -13,14 +12,6 @@ public class UserInfo {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        userObj = new HashMap<>();
-    }
-
-    public HashMap<String,String> build(){
-        userObj.put("First Name", this.firstName);
-        userObj.put("Last Name", this.lastName);
-        userObj.put("email", this.email);
-        return userObj;
     }
     
 }

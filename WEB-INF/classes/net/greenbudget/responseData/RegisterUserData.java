@@ -2,7 +2,7 @@ package net.greenbudget.responseData;
 
 import java.util.HashMap;
 
-public class UserData extends ResponseData implements Form  {
+public class RegisterUserData extends ResponseData implements Form  {
 
     private String firstName;
     private String lastName;
@@ -11,7 +11,7 @@ public class UserData extends ResponseData implements Form  {
     private String password2;
     private HashMap<String,String> allFields;
 
-    public UserData(String firstName,String lastName,String email,String password,String password2){
+    public RegisterUserData(String firstName,String lastName,String email,String password,String password2){
     
         this.firstName = firstName;
         this.lastName = lastName;

@@ -6,9 +6,10 @@ import net.greenbudget.db.methods.DbConnection;
 import net.greenbudget.db.methods.DeleteExpenses;
 import net.greenbudget.db.methods.DeleteUser;
 import net.greenbudget.db.methods.GetAccount;
+import net.greenbudget.db.methods.GetUser;
 import net.greenbudget.db.methods.UpdateExpenses;
 import net.greenbudget.db.methods.UpdateUser;
-import net.greenbudget.responseData.UserData;
+import net.greenbudget.responseData.RegisterUserData;
 import net.greenbudget.responseData.UserExpenses;
 
 public class Db implements Database {
@@ -22,14 +23,21 @@ public class Db implements Database {
 
     // Create a new user
     @Override
-    public String NewUser(UserData newUserForm){
+    public String NewUser(RegisterUserData newUserForm){
         CreateNewUser newUser = CreateNewUser.getInstance();
         return newUser.singleRecord(this.connection, newUserForm);
     }
 
+    // fetch user
+    @Override
+    public String fetchUser(String email){
+        var newUser = GetUser.getInstance();
+        return newUser.init(this.connection, email);
+    }
+
     // Update user
     @Override
-    public String updateUser(String newEmail, UserData user){
+    public String updateUser(String newEmail, RegisterUserData user){
         var newUser = UpdateUser.getInstance();
         return newUser.init(this.connection, newEmail, user);
     }
@@ -71,13 +79,16 @@ public class Db implements Database {
 
     public static void main(String[] args){
         var db = new Db();
-        var user = new UserData("Karine", "Olivier", "kne@gmail.com", "Carnaval2", null);
+        var user = new RegisterUserData("Karine", "Olivier", "kne@gmail.com", "Carnaval2", null);
 
         //create user
         // System.out.println(db.NewUser(user));
 
+         //fetch user 
+         System.out.println(db.fetchUser("karineolivier@gmail.com"));
+
         //update user 
-        System.out.println(db.updateUser("karineolivier@gmail.com", user));
+        // System.out.println(db.updateUser("karineolivier@gmail.com", user));
 
         //Delete user
         // System.out.println(db.deleteUser("jpolivierr@gmailcom"));
