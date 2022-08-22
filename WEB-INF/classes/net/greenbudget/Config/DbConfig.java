@@ -10,7 +10,13 @@ public class DbConfig {
     private final  String DB_DRIVER = dotenv.get("DB_DRIVER");
     private final  String DB_URL = dotenv.get("DB_URL");
 
+    private final  String DB_USER_TABLE = dotenv.get("DB_USER_TABLE");
+    private final  String DB_EXP_TABLE = dotenv.get("DB_EXP_TABLE");
+
     private final  String HOST = dotenv.get("HOST");
+
+    private final String QUERY_CHECK_RECORD = dotenv.get("QUERY_CHECK_RECORD");
+    private final String QUERY_CONFIRM_USER = dotenv.get("QUERY_CONFIRM_USER");
 
     private final String QUERY_GET_ACCOUNT = dotenv.get("QUERY_GET_ACCOUNT");
 
@@ -22,6 +28,14 @@ public class DbConfig {
     private final String QUERY_DELETE_USER = dotenv.get("QUERY_DELETE_USER");
     private final String QUERY_UPDATE_USER = dotenv.get("QUERY_UPDATE_USER");
     private final String QUERY_GET_USER = dotenv.get("QUERY_GET_USER");
+
+    public String getQueryConfirmUser(){
+        return QUERY_CONFIRM_USER;
+    }
+
+    public String getQueryCheckRecord(){
+        return QUERY_CHECK_RECORD;
+    }
 
     public String getQueryGetUser(){
         return QUERY_GET_USER ;
@@ -65,6 +79,14 @@ public class DbConfig {
 
     public String getDriver(){
         return DB_DRIVER;
+    }
+
+    public String getUserTable(){
+        return DB_USER_TABLE;
+    }
+
+    public String getExpTable(){
+        return DB_EXP_TABLE;
     }
 
     public String getUrl(){
