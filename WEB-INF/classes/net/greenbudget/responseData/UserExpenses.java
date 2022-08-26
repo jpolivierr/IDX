@@ -1,21 +1,22 @@
 package net.greenbudget.responseData;
 
-public class UserExpenses {
+public class UserExpenses extends ResponseData {
 
     private String name;
     private String frequency;
     private String category;
     private String dueDate;
+     private Double amount;
     private String clientDate;
-    private Double amount;
+   
 
     public UserExpenses (
                           String name,
                           String frequency,
                           String category,
                           String dueDate,
-                          String clientDate,
-                          Double amount
+                          Double amount,
+                          String clientDate
                         ){
         this.name = name;
         this.frequency = frequency;

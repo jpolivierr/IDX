@@ -7,21 +7,21 @@ import net.greenbudget.Config.DbConfig;
 import net.greenbudget.response.Response;
 import net.greenbudget.responseData.RegisterUserData;
 
-public class CreateNewUser {
+public class AddNewUser {
 
-    private static CreateNewUser instance;
+    private static AddNewUser instance;
 
-    private CreateNewUser(){}
+    private AddNewUser(){}
 
-    public static CreateNewUser getInstance(){
-        return instance = instance == null ? new CreateNewUser() : null;
+    public static AddNewUser getInstance(){
+        return instance = instance == null ? new AddNewUser() : null;
     }
 
     public String singleRecord(DbConnection dbConnection, RegisterUserData user){
         Connection connection = dbConnection.connect();
         String response =null;
         try {
-            String query = new DbConfig().getQueryCreateNewUser();
+            String query = new DbConfig().getQueryAddNewUser();
             dbConnection.pstmt = connection.prepareStatement(query);
             dbConnection.pstmt.setString(1,  user.getFirstName());
             dbConnection.pstmt.setString(2, user.getlastName());

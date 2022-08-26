@@ -17,6 +17,8 @@ public interface Database {
 
     public String addExpenses(String email, UserExpenses expenses);
 
+    public String fetchExpenses(String userEmail);
+
     public String updateExpenses(String newName, String email, UserExpenses expenses);
 
     public String deleteExpenses(String name, String email);

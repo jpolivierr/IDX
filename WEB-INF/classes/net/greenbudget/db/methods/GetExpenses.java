@@ -5,16 +5,15 @@ import java.sql.SQLException;
 
 import net.greenbudget.Config.DbConfig;
 import net.greenbudget.response.Response;
-import net.greenbudget.responseData.UserInfo;
+import net.greenbudget.responseData.UserExpenses;
 
-public class GetUser {
+public class GetExpenses {
+    private static GetExpenses instance;
 
-    private static GetUser instance;
+    private GetExpenses(){}
 
-    private GetUser(){}
-
-    public static GetUser getInstance(){
-        return instance = instance == null ? new GetUser() : null;
+    public static GetExpenses getInstance(){
+        return instance = instance == null ? new GetExpenses() : null;
     }
 
     public String init(DbConnection dbConnection, String userEmail){
@@ -25,7 +24,7 @@ public class GetUser {
 
         try {
             // get the Query string form .env
-            String query = new DbConfig().getQueryGetUser();
+            String query = new DbConfig().getQueryGetExpenses();
 
             //create prepare statement
             dbConnection.pstmt = connection.prepareStatement(query);
@@ -35,16 +34,17 @@ public class GetUser {
             var result = dbConnection.pstmt.executeQuery();
 
             while(result.next()){
-                String firstName = result.getString("first_name");
-                String lastName = result.getString("last_name");
-                String email= result.getString("email");
 
-                var userInfo = new UserInfo(firstName, lastName, email);
+                String expName = result.getString("exp_name");
+                String expFrequency = result.getString("exp_frequency");
+                String expCategory = result.getString("exp_category");
+                String expDueDate = result.getString("exp_due_date");
+                Double expAmount = result.getDouble("exp_amount");
 
-                var jsonResponse = new Response(200, "success", userInfo);
+                var userExpenses = new UserExpenses(expName, expFrequency, expCategory, expDueDate, expAmount, null);
+                var jsonResponse = new Response(200, "success", userExpenses);
                 response = jsonResponse.send();
             }
-
             
         }catch (SQLException e) {
             //Create a responses

@@ -31,6 +31,8 @@ public class CheckRecord {
                 case "user":
                     query = new DbConfig().getQueryConfirmUser();
                     break;
+                case "exp":
+                    query = new DbConfig().getQueryConfirmExp();
                 default:
                     query = null; 
             }

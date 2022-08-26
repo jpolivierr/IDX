@@ -16,57 +16,65 @@ public class DbConfig {
     private final  String HOST = dotenv.get("HOST");
 
     private final String QUERY_CHECK_RECORD = dotenv.get("QUERY_CHECK_RECORD");
+
     private final String QUERY_CONFIRM_USER = dotenv.get("QUERY_CONFIRM_USER");
+    private final String QUERY_CONFIRM_EXP = dotenv.get("QUERY_CONFIRM_EXP");
 
     private final String QUERY_GET_ACCOUNT = dotenv.get("QUERY_GET_ACCOUNT");
+    private final String QUERY_GET_EXPENSES = dotenv.get("QUERY_GET_EXPENSES");
 
     private final String QUERY_ADD_EXPENSES = dotenv.get("QUERY_ADD_EXPENSES");
+
     private final String QUERY_UPDATE_EXPENSES = dotenv.get("QUERY_UPDATE_EXPENSES");
     private final String QUERY_DELETE_EXPENSES = dotenv.get("QUERY_DELETE_EXPENSES");
+    
 
-    private final String QUERY_CREATE_NEW_USER = dotenv.get("QUERY_CREATE_NEW_USER");
+    private final String QUERY_ADD_NEW_USER = dotenv.get("QUERY_ADD_NEW_USER");
     private final String QUERY_DELETE_USER = dotenv.get("QUERY_DELETE_USER");
     private final String QUERY_UPDATE_USER = dotenv.get("QUERY_UPDATE_USER");
     private final String QUERY_GET_USER = dotenv.get("QUERY_GET_USER");
 
-    public String getQueryConfirmUser(){
+    public String getQueryConfirmExp(){
+        return QUERY_CONFIRM_EXP ;
+    }
+     public String getQueryConfirmUser(){
         return QUERY_CONFIRM_USER;
     }
 
-    public String getQueryCheckRecord(){
-        return QUERY_CHECK_RECORD;
+    public String getQueryGetExpenses(){
+        return QUERY_GET_EXPENSES;
     }
-
     public String getQueryGetUser(){
         return QUERY_GET_USER ;
+    }
+    public String getQueryGetAccount(){
+        return QUERY_GET_ACCOUNT;
+    }
+
+    public String getQueryAddNewUser(){
+        return QUERY_ADD_NEW_USER;
+    }
+    public String getQueryAddExpenses(){
+        return QUERY_ADD_EXPENSES;
     }
 
     public String getQueryUpdateUser(){
         return QUERY_UPDATE_USER ;
+    }
+    public String getQueryUpdateExpenses(){
+        return QUERY_UPDATE_EXPENSES ;
     }
 
     public String getQueryDeleteUser(){
         return QUERY_DELETE_USER;
     }
 
-    public String getQueryCreateNewUser(){
-        return QUERY_CREATE_NEW_USER;
-    }
-
     public String getQueryDeleteExpenses(){
         return QUERY_DELETE_EXPENSES ;
     }
 
-    public String getQueryUpdateExpenses(){
-        return QUERY_UPDATE_EXPENSES ;
-    }
-    
-    public String getQueryAddExpenses(){
-        return QUERY_ADD_EXPENSES;
-    }
-
-    public String getQueryGetAccount(){
-        return QUERY_GET_ACCOUNT;
+    public String getQueryCheckRecord(){
+        return QUERY_CHECK_RECORD;
     }
 
     public String getUsername(){
@@ -96,5 +104,15 @@ public class DbConfig {
     public String getHost(){
         return HOST;
     }
+
+
+    
+
+    
+    
+
+    
+    
+    
 
 }
