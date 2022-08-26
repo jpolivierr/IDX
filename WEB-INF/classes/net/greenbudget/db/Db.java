@@ -11,6 +11,7 @@ import net.greenbudget.db.methods.GetAccount;
 import net.greenbudget.db.methods.GetExpenses;
 import net.greenbudget.db.methods.GetUser;
 import net.greenbudget.db.methods.UpdateExpenses;
+import net.greenbudget.db.methods.UpdateTransaction;
 import net.greenbudget.db.methods.UpdateUser;
 import net.greenbudget.response.Response;
 import net.greenbudget.responseData.RegisterUserData;
@@ -138,6 +139,8 @@ public class Db implements Database {
         }
     }
 
+
+    // Add transaction
     public String addTransaction(Integer transactionId, String userEmail,UserTransaction transaction){
         if(!checkRecord("user", userEmail)){
             var response = new Response(404, "Not fround", null).send();
@@ -145,6 +148,18 @@ public class Db implements Database {
         }else{
             var addTransaction = AddTransaction.getInstance();
             return addTransaction.init(this.connection,transactionId, userEmail, transaction);
+        }
+    }
+
+
+    // update transaction
+    public String updateTransaction(String userEmail,UserTransaction transaction){
+        if(!checkRecord("user", userEmail)){
+            var response = new Response(404, "Not fround", null).send();
+            return response;
+        }else{
+            var updateTransaction = UpdateTransaction.getInstance();
+            return updateTransaction.init(this.connection, userEmail, transaction);
         }
     }
 
@@ -184,8 +199,13 @@ public class Db implements Database {
         // System.out.println(db.deleteExpenses("Bill", "jpolivier@gmail.com"));
 
         //Add Transaction
-        var transaction = new UserTransaction(234, "food", "Groceries", "2022:08:24", 19.99);
-        System.out.println(db.addTransaction(2343, "jpolivier@gmail.com", transaction));
+        // var transaction = new UserTransaction(234, "food", "Groceries", "2022:08:24", 19.99);
+        // System.out.println(db.addTransaction(2343, "jpolivier@gmail.com", transaction));
+
+        //Update Transaction
+         var transaction = new UserTransaction(234, "Food", "Groceries", "2022:08:24", 19.99);
+        System.out.println(db.updateTransaction("jpolivier@gmail.com", transaction));
     }
+
 
 }
