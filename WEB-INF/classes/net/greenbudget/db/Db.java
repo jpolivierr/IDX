@@ -9,6 +9,7 @@ import net.greenbudget.db.methods.DeleteExpenses;
 import net.greenbudget.db.methods.DeleteUser;
 import net.greenbudget.db.methods.GetAccount;
 import net.greenbudget.db.methods.GetExpenses;
+import net.greenbudget.db.methods.GetTransactions;
 import net.greenbudget.db.methods.GetUser;
 import net.greenbudget.db.methods.UpdateExpenses;
 import net.greenbudget.db.methods.UpdateTransaction;
@@ -164,6 +165,16 @@ public class Db implements Database {
     }
 
 
+    // fetch transaction
+    public String fetchTransaction(String userEmail){
+        if(!checkRecord("user", userEmail)){
+            var response = new Response(404, "Not fround", null).send();
+            return response;
+        }else{
+            var getTransaction = GetTransactions.getInstance();
+           return getTransaction.init(this.connection, userEmail);
+        }
+    } 
 
     public static void main(String[] args){
         var db = new Db();
@@ -203,8 +214,11 @@ public class Db implements Database {
         // System.out.println(db.addTransaction(2343, "jpolivier@gmail.com", transaction));
 
         //Update Transaction
-         var transaction = new UserTransaction(234, "Food", "Groceries", "2022:08:24", 19.99);
-        System.out.println(db.updateTransaction("jpolivier@gmail.com", transaction));
+        //  var transaction = new UserTransaction(234, "Food", "Groceries", "2022:08:24", 19.99);
+        // System.out.println(db.updateTransaction("jpolivier@gmail.com", transaction));
+
+        //fetch Transaction
+        System.out.println(db.fetchTransaction("jpolivier@gmail.com"));
     }
 
 

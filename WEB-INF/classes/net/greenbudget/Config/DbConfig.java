@@ -35,6 +35,7 @@ public class DbConfig {
 
     private final String QUERY_DELETE_EXPENSES = dotenv.get("QUERY_DELETE_EXPENSES");
     private final String QUERY_DELETE_USER = dotenv.get("QUERY_DELETE_USER");
+    private final String QUERY_DELETE_TRANSACTION = dotenv.get("QUERY_DELETE_TRANSACTION");
 
     
     
@@ -81,17 +82,21 @@ public class DbConfig {
         return QUERY_UPDATE_TRANSACTION ;
     }
 
+
     public String getQueryDeleteUser(){
         return QUERY_DELETE_USER;
     }
-
     public String getQueryDeleteExpenses(){
         return QUERY_DELETE_EXPENSES ;
     }
-
     public String getQueryCheckRecord(){
         return QUERY_CHECK_RECORD;
     }
+    public String getQueryDeleteTransaction(){
+        return QUERY_DELETE_TRANSACTION;
+    }
+
+
 
     public String getUsername(){
         return DB_USERNAME;
