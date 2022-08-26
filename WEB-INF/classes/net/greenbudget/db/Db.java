@@ -3,6 +3,7 @@ package net.greenbudget.db;
 import net.greenbudget.db.methods.AddExpenses;
 import net.greenbudget.db.methods.CheckRecord;
 import net.greenbudget.db.methods.AddNewUser;
+import net.greenbudget.db.methods.AddTransaction;
 import net.greenbudget.db.methods.DbConnection;
 import net.greenbudget.db.methods.DeleteExpenses;
 import net.greenbudget.db.methods.DeleteUser;
@@ -14,6 +15,7 @@ import net.greenbudget.db.methods.UpdateUser;
 import net.greenbudget.response.Response;
 import net.greenbudget.responseData.RegisterUserData;
 import net.greenbudget.responseData.UserExpenses;
+import net.greenbudget.responseData.UserTransaction;
 
 public class Db implements Database {
 
@@ -97,6 +99,7 @@ public class Db implements Database {
         }
     }
 
+    // get expenses
     @Override
     public String fetchExpenses(String userEmail){
         if(!checkRecord("user", userEmail)){
@@ -106,7 +109,6 @@ public class Db implements Database {
             var addExpenses = GetExpenses.getInstance();
            return addExpenses.init(this.connection, userEmail);
         }
-        
     }
 
     // update expenses
@@ -134,8 +136,19 @@ public class Db implements Database {
             DeleteExpenses deleteExpenses = DeleteExpenses.getInstance();
             return deleteExpenses.init(this.connection, name, userEmail);
         }
-        
     }
+
+    public String addTransaction(Integer transactionId, String userEmail,UserTransaction transaction){
+        if(!checkRecord("user", userEmail)){
+            var response = new Response(404, "Not fround", null).send();
+            return response;
+        }else{
+            var addTransaction = AddTransaction.getInstance();
+            return addTransaction.init(this.connection,transactionId, userEmail, transaction);
+        }
+    }
+
+
 
     public static void main(String[] args){
         var db = new Db();
@@ -161,14 +174,18 @@ public class Db implements Database {
         // System.out.println(db.addExpenses("jpolivier@gmail.com", expenses));
 
         //Update Expenses
-        var expenses = new UserExpenses("Education", "Every month", "Education", "2022:10:03", 150.45, null);
-        System.out.println(db.updateExpenses("Education","jpolivier@gmail.com", expenses));
+        // var expenses = new UserExpenses("Education", "Every month", "Education", "2022:10:03", 150.45, null);
+        // System.out.println(db.updateExpenses("Education","jpolivier@gmail.com", expenses));
 
         //Fetch Expenses
         //  System.out.println(db.fetchExpenses("jpolivier@gmail.com"));
 
         //Delete Expenses
         // System.out.println(db.deleteExpenses("Bill", "jpolivier@gmail.com"));
+
+        //Add Transaction
+        var transaction = new UserTransaction(234, "food", "Groceries", "2022:08:24", 19.99);
+        System.out.println(db.addTransaction(2343, "jpolivier@gmail.com", transaction));
     }
 
 }

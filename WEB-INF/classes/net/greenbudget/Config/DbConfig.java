@@ -26,7 +26,7 @@ public class DbConfig {
 
     private final String QUERY_ADD_EXPENSES = dotenv.get("QUERY_ADD_EXPENSES");
     private final String QUERY_ADD_NEW_USER = dotenv.get("QUERY_ADD_NEW_USER");
-    private final String QUERY_ADD_TRANSACTION = dotenv.get("QUERY_ADD_TRANSACTION")
+    private final String QUERY_ADD_TRANSACTION = dotenv.get("QUERY_ADD_TRANSACTION");
 
     private final String QUERY_UPDATE_USER = dotenv.get("QUERY_UPDATE_USER");
     private final String QUERY_UPDATE_EXPENSES = dotenv.get("QUERY_UPDATE_EXPENSES");

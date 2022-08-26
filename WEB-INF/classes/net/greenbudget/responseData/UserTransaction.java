@@ -1,6 +1,8 @@
 package net.greenbudget.responseData;
 
-public class UserTransaction {
+public class UserTransaction extends ResponseData {
+
+    private int transactionId;
     private String name;
     private String category;
     private String Date;
@@ -8,21 +10,26 @@ public class UserTransaction {
    
 
     public UserTransaction (
+                          int transactionId,
                           String name,
                           String category,
                           String Date,
                           Double amount
                         ){
+        this.transactionId = transactionId;
         this.name = name;
         this.category = category;
         this.Date = Date;
         this.amount = amount;
     }
 
+    public Integer getTransactionId(){
+        return this.transactionId;
+    }
+
     public String getName(){
         return this.name;
     }
-
 
     public String getCategory(){
         return this.category;

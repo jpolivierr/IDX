@@ -5,6 +5,7 @@ import java.sql.SQLException;
 
 import net.greenbudget.Config.DbConfig;
 import net.greenbudget.response.Response;
+import net.greenbudget.responseData.UserTransaction;
 
 public class AddTransaction {
      
@@ -16,7 +17,7 @@ public class AddTransaction {
         return instance = instance == null ? new AddTransaction() : null;
     }
 
-    public String init(DbConnection dbConnection, String userEmail, UserExpenses expenses){
+    public String init(DbConnection dbConnection, Integer transactionId, String userEmail, UserTransaction  transaction){
 
         //Get the connection
         Connection connection = dbConnection.connect();
@@ -29,13 +30,12 @@ public class AddTransaction {
             //create prepare statement
             dbConnection.pstmt = connection.prepareStatement(query);
 
-            dbConnection.pstmt.setString(1, expenses.getName());
-            dbConnection.pstmt.setString(2, expenses.getFrequency());
-            dbConnection.pstmt.setString(3, expenses.getCategory());
-            dbConnection.pstmt.setString(4, expenses.getDueDate());
-            dbConnection.pstmt.setDouble(5, expenses.getAmount());
-            dbConnection.pstmt.setString(6, expenses.getClientDate());
-            dbConnection.pstmt.setString(7, userEmail);  
+            dbConnection.pstmt.setString(1, transaction.getName());
+            dbConnection.pstmt.setString(2, transaction.getCategory());
+            dbConnection.pstmt.setDouble(3, transaction.getAmount());
+            dbConnection.pstmt.setString(4, transaction.getDate());
+            dbConnection.pstmt.setString(5, userEmail); 
+            dbConnection.pstmt.setInt(6, transactionId); 
             
             dbConnection.pstmt.execute();
 
