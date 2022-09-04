@@ -6,6 +6,7 @@ import net.greenbudget.db.methods.AddNewUser;
 import net.greenbudget.db.methods.AddTransaction;
 import net.greenbudget.db.methods.DbConnection;
 import net.greenbudget.db.methods.DeleteExpenses;
+import net.greenbudget.db.methods.DeleteTransaction;
 import net.greenbudget.db.methods.DeleteUser;
 import net.greenbudget.db.methods.GetAccount;
 import net.greenbudget.db.methods.GetExpenses;
@@ -23,6 +24,7 @@ public class Db implements Database {
 
     private DbConnection connection;
     private CheckRecord checkRecord;
+    private GetUser newUser = GetUser.getInstance();
 
     public Db(){
         connection = new DbConnection();
@@ -44,12 +46,12 @@ public class Db implements Database {
     // fetch user
     @Override
     public String fetchUser(String userEmail){
+        
         if(!checkRecord("user", userEmail)){
             var response = new Response(404, "Not fround", null).send();
             return response;
         }else{
-            var newUser = GetUser.getInstance();
-        return newUser.init(this.connection, userEmail);
+            return newUser.init(this.connection, userEmail);
         }
     }
 
@@ -176,9 +178,20 @@ public class Db implements Database {
         }
     } 
 
+    // Delete transaction
+    public String deleteTransaction(Integer transactionId, String userEmail){
+        if(!checkRecord("user", userEmail)){
+            var response = new Response(404, "Not fround", null).send();
+            return response;
+        }else{
+            var deleteTransaction = DeleteTransaction.getInstance();
+            return deleteTransaction.init(this.connection, transactionId, userEmail);
+        }
+    }
+
     public static void main(String[] args){
         var db = new Db();
-        var user = new RegisterUserData("Fredeic", "Olivier", "jpolivier@gmail.com", "Carnaval2", null);
+        // var user = new RegisterUserData("Fredeic", "Olivier", "jpolivier@gmail.com", "Carnaval2", null);
 
         //chech record
         // System.out.println(db.checkRecord("user", "jpolivier@gmail.com"));
@@ -218,7 +231,10 @@ public class Db implements Database {
         // System.out.println(db.updateTransaction("jpolivier@gmail.com", transaction));
 
         //fetch Transaction
-        System.out.println(db.fetchTransaction("jpolivier@gmail.com"));
+        // System.out.println(db.fetchTransaction("jpolivier@gmail.com"));
+
+        //Delete Transaction
+        // System.out.println(db.deleteTransaction(0, "jpolivier@gmail.com"));
     }
 
 

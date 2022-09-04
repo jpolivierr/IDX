@@ -3,18 +3,15 @@ package net.greenbudget.db.methods;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import com.mysql.cj.jdbc.Blob;
-
 import net.greenbudget.Config.DbConfig;
 import net.greenbudget.response.Response;
 
 public class CheckRecord {
-    private static CheckRecord  instance;
 
     private CheckRecord(){}
 
     public static CheckRecord  getInstance(){
-        return instance = instance == null ? new CheckRecord () : null;
+        return new CheckRecord ();
     }
 
     public Boolean init(DbConnection dbConnection,String type, String value){
