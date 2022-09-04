@@ -3,23 +3,23 @@ package net.greenbudget.responseData;
 public class UserTransaction extends ResponseData {
 
     private int transactionId;
-    private String name;
+    private String merchantName;
     private String category;
-    private String Date;
+    private String date;
      private Double amount;
    
 
     public UserTransaction (
                           int transactionId,
-                          String name,
+                          String merchantName,
                           String category,
-                          String Date,
+                          String date,
                           Double amount
                         ){
         this.transactionId = transactionId;
-        this.name = name;
+        this.merchantName = merchantName;
         this.category = category;
-        this.Date = Date;
+        this.date = date;
         this.amount = amount;
     }
 
@@ -27,8 +27,8 @@ public class UserTransaction extends ResponseData {
         return this.transactionId;
     }
 
-    public String getName(){
-        return this.name;
+    public String getMerchantName(){
+        return this.merchantName;
     }
 
     public String getCategory(){
@@ -36,7 +36,7 @@ public class UserTransaction extends ResponseData {
     }
 
     public String getDate(){
-        return this.Date;
+        return this.date;
     }
 
     public Double getAmount(){

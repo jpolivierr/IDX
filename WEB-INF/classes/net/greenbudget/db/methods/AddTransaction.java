@@ -30,7 +30,7 @@ public class AddTransaction {
             //create prepare statement
             dbConnection.pstmt = connection.prepareStatement(query);
 
-            dbConnection.pstmt.setString(1, transaction.getName());
+            dbConnection.pstmt.setString(1, transaction.getMerchantName());
             dbConnection.pstmt.setString(2, transaction.getCategory());
             dbConnection.pstmt.setDouble(3, transaction.getAmount());
             dbConnection.pstmt.setString(4, transaction.getDate());
