@@ -1,6 +1,6 @@
 package net.greenbudget.db;
 
-import net.greenbudget.db.methods.AddExpenses;
+import net.greenbudget.db.methods.AddRecurringBill;
 import net.greenbudget.db.methods.CheckRecord;
 import net.greenbudget.db.methods.AddNewUser;
 import net.greenbudget.db.methods.AddTransaction;
@@ -20,7 +20,7 @@ import net.greenbudget.responseData.RegisterUserData;
 import net.greenbudget.responseData.UserRecurringBill;
 import net.greenbudget.responseData.UserTransaction;
 
-public class Db implements Database {
+public class Db{
 
     private DbConnection connection;
     private CheckRecord checkRecord;
@@ -37,14 +37,14 @@ public class Db implements Database {
     }
 
     // Create a new user
-    @Override
+    // @Override
     public String NewUser(RegisterUserData newUserForm){
         AddNewUser newUser = AddNewUser.getInstance();
         return newUser.singleRecord(this.connection, newUserForm);
     }
 
     // fetch user
-    @Override
+    // @Override
     public String fetchUser(String userEmail){
         
         if(!checkRecord("user", userEmail)){
@@ -56,7 +56,7 @@ public class Db implements Database {
     }
 
     // Update user
-    @Override
+    // @Override
     public String updateUser(String newEmail, RegisterUserData user){
         if(!checkRecord("user", user.getemail())){
             var response = new Response(404, "Not fround", null).send();
@@ -68,7 +68,7 @@ public class Db implements Database {
     }
 
     // Delete user
-    @Override
+    // @Override
     public String deleteUser(String userEmail){
         if(!checkRecord("user", userEmail)){
             var response = new Response(404, "Not fround", null).send();
@@ -80,7 +80,7 @@ public class Db implements Database {
     }
 
     // get user account information
-    @Override
+    // @Override
     public String fetchAccount(String email){
         if(!checkRecord("user", email)){
             var response = new Response(404, "Not fround", null).send();
@@ -91,54 +91,54 @@ public class Db implements Database {
         }
     }
 
-    // add expenses
-    @Override
-    public String addExpenses(String userEmail, UserRecurringBill expenses){
+    // add recurring bill
+    // @Override
+    public String addRecurringBill(String userEmail, UserRecurringBill expenses){
         if(!checkRecord("user", userEmail)){
             var response = new Response(404, "Not fround", null).send();
             return response;
         }else{
-            AddExpenses addExpenses = AddExpenses.getInstance();
-           return addExpenses.init(this.connection, userEmail, expenses);
+            AddRecurringBill addRecurringBill = AddRecurringBill.getInstance();
+           return addRecurringBill.init(this.connection, userEmail, expenses);
         }
     }
 
-    // get expenses
-    @Override
-    public String fetchExpenses(String userEmail){
+    // get recurring bill
+    // @Override
+    public String fetchRecurringBill(String userEmail){
         if(!checkRecord("user", userEmail)){
             var response = new Response(404, "Not fround", null).send();
             return response;
         }else{
-            var addExpenses = GetRecurringBill.getInstance();
-           return addExpenses.init(this.connection, userEmail);
+            var addRecurringBill = GetRecurringBill.getInstance();
+           return addRecurringBill.init(this.connection, userEmail);
         }
     }
 
-    // update expenses
-    @Override
-    public String updateExpenses(String newName, String userEmail, UserRecurringBill expenses){
+    // update recuring bill
+    // @Override
+    public String updateRecurringBill(String newName, String userEmail, UserRecurringBill expenses){
 
         if(!checkRecord("user", userEmail)){
             var response = new Response(404, "Not fround", null).send();
             return response;
         }else{
-            UpdateRecurringBill updateExpenses = UpdateRecurringBill.getInstance();
-        return updateExpenses.init(this.connection, newName, userEmail, expenses);
+            UpdateRecurringBill updateRecurringBill = UpdateRecurringBill.getInstance();
+        return updateRecurringBill.init(this.connection, newName, userEmail, expenses);
         }
 
         
     }
 
-    // delete expenses
-    @Override
-    public String deleteExpenses(String name, String userEmail){
+    // delete recurring bill
+    // @Override
+    public String deleteRecurringBill(String name, String userEmail){
         if(!checkRecord("user", userEmail)){
             var response = new Response(404, "Not fround", null).send();
             return response;
         }else{
-            DeleteRecurringBill deleteExpenses = DeleteRecurringBill.getInstance();
-            return deleteExpenses.init(this.connection, name, userEmail);
+            DeleteRecurringBill deleteRecurringBill = DeleteRecurringBill.getInstance();
+            return deleteRecurringBill.init(this.connection, name, userEmail);
         }
     }
 
@@ -210,17 +210,17 @@ public class Db implements Database {
 
         //Add Expenses
         // var expenses = new UserExpenses("School", "Every 3 months", "Bills & Utilities", "2022:10:03", 950.45, null);
-        // System.out.println(db.addExpenses("jpolivier@gmail.com", expenses));
+        // System.out.println(db.addRecurringBill("jpolivier@gmail.com", expenses));
 
         //Update Expenses
         // var expenses = new UserExpenses("Education", "Every month", "Education", "2022:10:03", 150.45, null);
-        // System.out.println(db.updateExpenses("Education","jpolivier@gmail.com", expenses));
+        // System.out.println(db.updateRecurringBill("Education","jpolivier@gmail.com", expenses));
 
         //Fetch Expenses
-        //  System.out.println(db.fetchExpenses("jpolivier@gmail.com"));
+        //  System.out.println(db.fetchRecurringBill("jpolivier@gmail.com"));
 
         //Delete Expenses
-        // System.out.println(db.deleteExpenses("Bill", "jpolivier@gmail.com"));
+        // System.out.println(db.deleteRecurringBill("Bill", "jpolivier@gmail.com"));
 
         //Add Transaction
         // var transaction = new UserTransaction(234, "food", "Groceries", "2022:08:24", 19.99);

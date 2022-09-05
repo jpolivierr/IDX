@@ -36,7 +36,7 @@ public class UpdateRecurringBill {
             dbConnection.pstmt.setString(4, expenses.getDueDate());
             dbConnection.pstmt.setDouble(5, expenses.getAmount());
             dbConnection.pstmt.setString(6, expenses.getClientDate());
-            dbConnection.pstmt.setString(7, expenses.getName());
+            dbConnection.pstmt.setString(7, expenses.getmerchantName());
             dbConnection.pstmt.setString(8, userEmail);  
             
             dbConnection.pstmt.execute();

@@ -7,14 +7,14 @@ import net.greenbudget.Config.DbConfig;
 import net.greenbudget.response.Response;
 import net.greenbudget.responseData.UserRecurringBill;
 
-public class AddExpenses {
+public class AddRecurringBill {
     
-    private static AddExpenses instance;
+    private static AddRecurringBill instance;
 
-    private AddExpenses(){}
+    private AddRecurringBill(){}
 
-    public static AddExpenses getInstance(){
-        return instance = instance == null ? new AddExpenses() : null;
+    public static AddRecurringBill getInstance(){
+        return instance = instance == null ? new AddRecurringBill() : null;
     }
 
     public String init(DbConnection dbConnection, String userEmail, UserRecurringBill expenses){
@@ -30,7 +30,7 @@ public class AddExpenses {
             //create prepare statement
             dbConnection.pstmt = connection.prepareStatement(query);
 
-            dbConnection.pstmt.setString(1, expenses.getName());
+            dbConnection.pstmt.setString(1, expenses.getmerchantName());
             dbConnection.pstmt.setString(2, expenses.getFrequency());
             dbConnection.pstmt.setString(3, expenses.getCategory());
             dbConnection.pstmt.setString(4, expenses.getDueDate());
