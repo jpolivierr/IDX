@@ -93,13 +93,13 @@ public class Db{
 
     // add recurring bill
     // @Override
-    public String addRecurringBill(String userEmail, UserRecurringBill expenses){
+    public String addRecurringBill(String userEmail, UserRecurringBill recurringBill){
         if(!checkRecord("user", userEmail)){
             var response = new Response(404, "Not fround", null).send();
             return response;
         }else{
             AddRecurringBill addRecurringBill = AddRecurringBill.getInstance();
-           return addRecurringBill.init(this.connection, userEmail, expenses);
+           return addRecurringBill.init(this.connection, userEmail, recurringBill);
         }
     }
 
@@ -117,14 +117,14 @@ public class Db{
 
     // update recuring bill
     // @Override
-    public String updateRecurringBill(String newName, String userEmail, UserRecurringBill expenses){
+    public String updateRecurringBill(String newName, String userEmail, UserRecurringBill recurringBill){
 
         if(!checkRecord("user", userEmail)){
             var response = new Response(404, "Not fround", null).send();
             return response;
         }else{
             UpdateRecurringBill updateRecurringBill = UpdateRecurringBill.getInstance();
-        return updateRecurringBill.init(this.connection, newName, userEmail, expenses);
+        return updateRecurringBill.init(this.connection, newName, userEmail, recurringBill);
         }
 
         
@@ -208,18 +208,18 @@ public class Db{
         //Delete user
         //System.out.println(db.deleteUser("karineoli@gmail.com"));
 
-        //Add Expenses
-        // var expenses = new UserExpenses("School", "Every 3 months", "Bills & Utilities", "2022:10:03", 950.45, null);
-        // System.out.println(db.addRecurringBill("jpolivier@gmail.com", expenses));
+        //Add recurringBill
+        // var recurringBill = new UserrecurringBill("School", "Every 3 months", "Bills & Utilities", "2022:10:03", 950.45, null);
+        // System.out.println(db.addRecurringBill("jpolivier@gmail.com", recurringBill));
 
-        //Update Expenses
-        // var expenses = new UserExpenses("Education", "Every month", "Education", "2022:10:03", 150.45, null);
-        // System.out.println(db.updateRecurringBill("Education","jpolivier@gmail.com", expenses));
+        //Update recurringBill
+        // var recurringBill = new UserrecurringBill("Education", "Every month", "Education", "2022:10:03", 150.45, null);
+        // System.out.println(db.updateRecurringBill("Education","jpolivier@gmail.com", recurringBill));
 
-        //Fetch Expenses
+        //Fetch recurringBill
         //  System.out.println(db.fetchRecurringBill("jpolivier@gmail.com"));
 
-        //Delete Expenses
+        //Delete recurringBill
         // System.out.println(db.deleteRecurringBill("Bill", "jpolivier@gmail.com"));
 
         //Add Transaction

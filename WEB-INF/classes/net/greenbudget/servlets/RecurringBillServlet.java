@@ -40,9 +40,9 @@ public class RecurringBillServlet extends HttpServlet {
 
          );
 
-         db.AddRecurringBill();
+         db.addRecurringBill("jpolivier@gmail.com", recurringBill);
         //  var userAccount = db.fetchUser("jpolivier@gmail.com");
-         resp.getWriter().println(category);
+        //  resp.getWriter().println(category);
 
   }
 
