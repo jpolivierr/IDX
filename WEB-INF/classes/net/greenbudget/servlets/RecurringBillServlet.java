@@ -22,6 +22,7 @@ public class RecurringBillServlet extends HttpServlet {
 
          resp.setHeader("Access-Control-Allow-Origin", config.getHost());
 
+         String rcId = req.getParameter("rcId");
          String merchantName = req.getParameter("merchantName");
          String category = req.getParameter("category");
          double amount = Double.parseDouble(req.getParameter("amount"));
@@ -30,6 +31,7 @@ public class RecurringBillServlet extends HttpServlet {
          String clientDate = req.getParameter("date");
 
          var recurringBill = new UserRecurringBill(
+                                                    rcId,
                                                     merchantName,
                                                     frequency,
                                                     category,

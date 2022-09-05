@@ -2,6 +2,7 @@ package net.greenbudget.responseData;
 
 public class UserRecurringBill extends ResponseData {
 
+    private String rcId;
     private String merchantName;
     private String frequency;
     private String category;
@@ -11,6 +12,7 @@ public class UserRecurringBill extends ResponseData {
    
 
     public UserRecurringBill (
+                          String rcId,
                           String merchantName,
                           String frequency,
                           String category,
@@ -18,12 +20,17 @@ public class UserRecurringBill extends ResponseData {
                           Double amount,
                           String clientDate
                         ){
+        this.rcId = rcId;
         this.merchantName = merchantName;
         this.frequency = frequency;
         this.category = category;
         this.dueDate = dueDate;
         this.clientDate = clientDate;
         this.amount = amount;
+    }
+
+    public String getRcId(){
+        return this.rcId;
     }
 
     public String getmerchantName(){
