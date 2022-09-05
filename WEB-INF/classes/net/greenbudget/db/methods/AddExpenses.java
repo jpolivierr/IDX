@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 import net.greenbudget.Config.DbConfig;
 import net.greenbudget.response.Response;
-import net.greenbudget.responseData.UserExpenses;
+import net.greenbudget.responseData.UserRecurringBill;
 
 public class AddExpenses {
     
@@ -17,7 +17,7 @@ public class AddExpenses {
         return instance = instance == null ? new AddExpenses() : null;
     }
 
-    public String init(DbConnection dbConnection, String userEmail, UserExpenses expenses){
+    public String init(DbConnection dbConnection, String userEmail, UserRecurringBill expenses){
 
         //Get the connection
         Connection connection = dbConnection.connect();

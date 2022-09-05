@@ -5,19 +5,19 @@ import net.greenbudget.db.methods.CheckRecord;
 import net.greenbudget.db.methods.AddNewUser;
 import net.greenbudget.db.methods.AddTransaction;
 import net.greenbudget.db.methods.DbConnection;
-import net.greenbudget.db.methods.DeleteExpenses;
+import net.greenbudget.db.methods.DeleteRecurringBill;
 import net.greenbudget.db.methods.DeleteTransaction;
 import net.greenbudget.db.methods.DeleteUser;
 import net.greenbudget.db.methods.GetAccount;
-import net.greenbudget.db.methods.GetExpenses;
+import net.greenbudget.db.methods.GetRecurringBill;
 import net.greenbudget.db.methods.GetTransactions;
 import net.greenbudget.db.methods.GetUser;
-import net.greenbudget.db.methods.UpdateExpenses;
+import net.greenbudget.db.methods.UpdateRecurringBill;
 import net.greenbudget.db.methods.UpdateTransaction;
 import net.greenbudget.db.methods.UpdateUser;
 import net.greenbudget.response.Response;
 import net.greenbudget.responseData.RegisterUserData;
-import net.greenbudget.responseData.UserExpenses;
+import net.greenbudget.responseData.UserRecurringBill;
 import net.greenbudget.responseData.UserTransaction;
 
 public class Db implements Database {
@@ -93,7 +93,7 @@ public class Db implements Database {
 
     // add expenses
     @Override
-    public String addExpenses(String userEmail, UserExpenses expenses){
+    public String addExpenses(String userEmail, UserRecurringBill expenses){
         if(!checkRecord("user", userEmail)){
             var response = new Response(404, "Not fround", null).send();
             return response;
@@ -110,20 +110,20 @@ public class Db implements Database {
             var response = new Response(404, "Not fround", null).send();
             return response;
         }else{
-            var addExpenses = GetExpenses.getInstance();
+            var addExpenses = GetRecurringBill.getInstance();
            return addExpenses.init(this.connection, userEmail);
         }
     }
 
     // update expenses
     @Override
-    public String updateExpenses(String newName, String userEmail, UserExpenses expenses){
+    public String updateExpenses(String newName, String userEmail, UserRecurringBill expenses){
 
         if(!checkRecord("user", userEmail)){
             var response = new Response(404, "Not fround", null).send();
             return response;
         }else{
-            UpdateExpenses updateExpenses = UpdateExpenses.getInstance();
+            UpdateRecurringBill updateExpenses = UpdateRecurringBill.getInstance();
         return updateExpenses.init(this.connection, newName, userEmail, expenses);
         }
 
@@ -137,7 +137,7 @@ public class Db implements Database {
             var response = new Response(404, "Not fround", null).send();
             return response;
         }else{
-            DeleteExpenses deleteExpenses = DeleteExpenses.getInstance();
+            DeleteRecurringBill deleteExpenses = DeleteRecurringBill.getInstance();
             return deleteExpenses.init(this.connection, name, userEmail);
         }
     }

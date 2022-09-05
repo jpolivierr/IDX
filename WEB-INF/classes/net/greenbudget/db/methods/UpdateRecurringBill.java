@@ -5,18 +5,19 @@ import java.sql.SQLException;
 
 import net.greenbudget.Config.DbConfig;
 import net.greenbudget.response.Response;
-import net.greenbudget.responseData.UserExpenses;
+import net.greenbudget.responseData.UserRecurringBill;
 
-public class GetExpenses {
-    private static GetExpenses instance;
+public class UpdateRecurringBill {
 
-    private GetExpenses(){}
+    private static UpdateRecurringBill instance;
 
-    public static GetExpenses getInstance(){
-        return instance = instance == null ? new GetExpenses() : null;
+    private UpdateRecurringBill(){}
+
+    public static UpdateRecurringBill getInstance(){
+        return instance = instance == null ? new UpdateRecurringBill() : null;
     }
 
-    public String init(DbConnection dbConnection, String userEmail){
+    public String init(DbConnection dbConnection, String newName, String userEmail, UserRecurringBill expenses){
 
         //Get the connection
         Connection connection = dbConnection.connect();
@@ -24,27 +25,26 @@ public class GetExpenses {
 
         try {
             // get the Query string form .env
-            String query = new DbConfig().getQueryGetExpenses();
+            String query = new DbConfig().getQueryUpdateExpenses();
 
             //create prepare statement
             dbConnection.pstmt = connection.prepareStatement(query);
 
-            dbConnection.pstmt.setString(1, userEmail);                
-            // get the result set from database
-            var result = dbConnection.pstmt.executeQuery();
+            dbConnection.pstmt.setString(1, newName);
+            dbConnection.pstmt.setString(2, expenses.getFrequency());
+            dbConnection.pstmt.setString(3, expenses.getCategory());
+            dbConnection.pstmt.setString(4, expenses.getDueDate());
+            dbConnection.pstmt.setDouble(5, expenses.getAmount());
+            dbConnection.pstmt.setString(6, expenses.getClientDate());
+            dbConnection.pstmt.setString(7, expenses.getName());
+            dbConnection.pstmt.setString(8, userEmail);  
+            
+            dbConnection.pstmt.execute();
 
-            while(result.next()){
-
-                String expName = result.getString("exp_name");
-                String expFrequency = result.getString("exp_frequency");
-                String expCategory = result.getString("exp_category");
-                String expDueDate = result.getString("exp_due_date");
-                Double expAmount = result.getDouble("exp_amount");
-
-                var userExpenses = new UserExpenses(expName, expFrequency, expCategory, expDueDate, expAmount, null);
-                var jsonResponse = new Response(200, "success", userExpenses);
+            var jsonResponse = new Response(200, "Expenses updated.", null);
+            //assign response
                 response = jsonResponse.send();
-            }
+
             
         }catch (SQLException e) {
             //Create a responses

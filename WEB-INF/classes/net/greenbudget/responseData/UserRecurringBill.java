@@ -1,6 +1,6 @@
 package net.greenbudget.responseData;
 
-public class UserExpenses extends ResponseData {
+public class UserRecurringBill extends ResponseData {
 
     private String name;
     private String frequency;
@@ -10,7 +10,7 @@ public class UserExpenses extends ResponseData {
     private String clientDate;
    
 
-    public UserExpenses (
+    public UserRecurringBill (
                           String name,
                           String frequency,
                           String category,

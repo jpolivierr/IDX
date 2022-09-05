@@ -6,13 +6,13 @@ import java.sql.SQLException;
 import net.greenbudget.Config.DbConfig;
 import net.greenbudget.response.Response;
 
-public class DeleteExpenses {
-    private static DeleteExpenses instance;
+public class DeleteRecurringBill {
+    private static DeleteRecurringBill instance;
 
-    private DeleteExpenses(){}
+    private DeleteRecurringBill(){}
 
-    public static DeleteExpenses getInstance(){
-        return instance = instance == null ? new DeleteExpenses() : null;
+    public static DeleteRecurringBill getInstance(){
+        return instance = instance == null ? new DeleteRecurringBill() : null;
     }
 
     public String init(DbConnection dbConnection, String name, String userEmail){

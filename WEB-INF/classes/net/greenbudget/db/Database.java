@@ -1,7 +1,7 @@
 package net.greenbudget.db;
 
 import net.greenbudget.responseData.RegisterUserData;
-import net.greenbudget.responseData.UserExpenses;
+import net.greenbudget.responseData.UserRecurringBill;
 
 public interface Database {
 
@@ -15,11 +15,11 @@ public interface Database {
 
     public String fetchAccount(String email);
 
-    public String addExpenses(String email, UserExpenses expenses);
+    public String addExpenses(String email, UserRecurringBill expenses);
 
     public String fetchExpenses(String userEmail);
 
-    public String updateExpenses(String newName, String email, UserExpenses expenses);
+    public String updateExpenses(String newName, String email, UserRecurringBill expenses);
 
     public String deleteExpenses(String name, String email);
 
