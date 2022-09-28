@@ -1,5 +1,7 @@
 package net.greenbudget.responseData;
 
+import java.util.HashMap;
+
 public class UserRecurringBill extends ResponseData {
 
     private String rcId;
@@ -7,7 +9,7 @@ public class UserRecurringBill extends ResponseData {
     private String frequency;
     private String category;
     private String dueDate;
-     private Double amount;
+    private Double amount;
     private String clientDate;
    
 
@@ -56,6 +58,7 @@ public class UserRecurringBill extends ResponseData {
     public Double getAmount(){
         return this.amount;
     }
+       
 
     
 }

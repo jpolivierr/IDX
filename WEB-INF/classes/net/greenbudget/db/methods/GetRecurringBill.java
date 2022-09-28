@@ -35,13 +35,14 @@ public class GetRecurringBill {
 
             while(result.next()){
 
+                String rcId = result.getString("rcId");
                 String expName = result.getString("exp_name");
                 String expFrequency = result.getString("exp_frequency");
                 String expCategory = result.getString("exp_category");
                 String expDueDate = result.getString("exp_due_date");
                 Double expAmount = result.getDouble("exp_amount");
 
-                var userExpenses = new UserRecurringBill(expName, expFrequency, expCategory, expDueDate, expAmount, null);
+                var userExpenses = new UserRecurringBill(rcId,expName, expFrequency, expCategory, expDueDate, expAmount, null);
                 var jsonResponse = new Response(200, "success", userExpenses);
                 response = jsonResponse.send();
             }

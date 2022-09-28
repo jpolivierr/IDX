@@ -2,6 +2,8 @@ package net.greenbudget.servlets;
 
 import java.io.IOException;
 
+import com.google.gson.Gson;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.http.HttpServlet;
@@ -20,31 +22,51 @@ public class RecurringBillServlet extends HttpServlet {
      
         var config = new DbConfig();
 
-         resp.setHeader("Access-Control-Allow-Origin", config.getHost());
+        resp.setHeader("Access-Control-Allow-Origin", config.getHost());
+        String formData = req.getParameter("formData");
+        var gson = new Gson();
 
-         String rcId = req.getParameter("rcId");
-         String merchantName = req.getParameter("merchantName");
-         String category = req.getParameter("category");
-         double amount = Double.parseDouble(req.getParameter("amount"));
-         String frequency = req.getParameter("frequency");
-         String date = req.getParameter("date");
-         String clientDate = req.getParameter("date");
+        // UserRecurringBill.builType newjson = gson.fromJson(formData, UserRecurringBill.builType.class);
 
-         var recurringBill = new UserRecurringBill(
-                                                    rcId,
-                                                    merchantName,
-                                                    frequency,
-                                                    category,
-                                                    date,
-                                                    amount,
-                                                    clientDate
+        // String responseData = db.addRecurringBill("jpolivier@gmail.com", recurringBill);
+ 
+ 
+ 
+        // resp.getWriter().println(gson.toJson(newjson) ); 
+        //   var recurringBill = new UserRecurringBill(
+        //                                             rcId,
+        //                                             merchantName,
+        //                                             frequency,
+        //                                             category,
+        //                                             date,
+        //                                             amount,
+        //                                             clientDate
 
 
-         );
+        //  );
 
-         db.addRecurringBill("jpolivier@gmail.com", recurringBill);
-        //  var userAccount = db.fetchUser("jpolivier@gmail.com");
-        //  resp.getWriter().println(category);
+               
+        //  String rcId = req.getParameter("rcId");
+        //  String merchantName = req.getParameter("merchantName");
+        //  String category = req.getParameter("category");
+        //  double amount = Double.parseDouble(req.getParameter("amount"));
+        //  String frequency = req.getParameter("frequency");
+        //  String date = req.getParameter("date");
+        //  String clientDate = req.getParameter("clientDate");
+
+        //  var recurringBill = new UserRecurringBill(
+        //                                             rcId,
+        //                                             merchantName,
+        //                                             frequency,
+        //                                             category,
+        //                                             date,
+        //                                             amount,
+        //                                             clientDate
+
+
+        //  );
+
+                 
 
   }
 

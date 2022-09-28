@@ -25,6 +25,7 @@ public class Db{
     private DbConnection connection;
     private CheckRecord checkRecord;
     private GetUser newUser = GetUser.getInstance();
+    private AddRecurringBill addRecurringBill = AddRecurringBill.getInstance();
 
     public Db(){
         connection = new DbConnection();
@@ -98,7 +99,6 @@ public class Db{
             var response = new Response(404, "Not fround", null).send();
             return response;
         }else{
-            AddRecurringBill addRecurringBill = AddRecurringBill.getInstance();
            return addRecurringBill.init(this.connection, userEmail, recurringBill);
         }
     }

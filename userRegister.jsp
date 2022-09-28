@@ -14,7 +14,7 @@
 <body>
 
     <!--header -->
-     <jsp:include page="webapp/component/Headers/header-register.jsp"/> 
+     <jsp:include page="webapp/component/Navigation/header-register.jsp"/> 
 
     <jsp:include page="webapp/component/register-cp.jsp"/>
     
