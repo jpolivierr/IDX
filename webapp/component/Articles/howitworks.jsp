@@ -1,4 +1,4 @@
-<article class="how-it-work column-3x-center bk-main av-padding-2x">
+<article id="benefits" class="how-it-work column-3x-center bk-main av-padding-2x">
     <div class="container">
            
           <section>

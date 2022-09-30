@@ -1,4 +1,4 @@
-<header class="av-header-v1">
+<header class="av-header-v1 av-padding-top-small">
  
         <div class="container">
             <figure class="logo">
@@ -7,7 +7,7 @@
             <nav>
                 <ul class="header-nav-list">
                 <li>Demo</li>
-                <li>Benefits</li>
+                <li><a href="#benefits">Benefits</a></li>
             </ul>
             </nav>
             

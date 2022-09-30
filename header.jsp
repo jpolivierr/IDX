@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="/webapp/asset/css/Button.css" type="text/css">
         <link rel="stylesheet" href="/webapp/asset/css/custom.css" type="text/css">
         <link rel="stylesheet" href="/webapp/asset/css/responsive.css" type="text/css">
+        <link rel="stylesheet" href="/webapp/asset/css/modal.css" type="text/css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> 
