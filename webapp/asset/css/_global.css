@@ -1,0 +1,194 @@
+/* 
+=======================================================
+START: GLOBAL
+=======================================================
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
+}
+
+.container{
+    width: 85%;
+    max-width: 1658px;
+    margin: auto;
+}
+
+.container-full{
+    width: 100%;
+    max-width: 1658px;
+    margin: auto;
+}
+
+img{
+    width: 100%;
+}
+
+.hide{
+    display: none;
+}
+
+/* background */
+
+.bk-transparent {
+  background: transparent;
+}
+
+.bk-transparent h1,
+.bk-transparent h2,
+.bk-transparent h3,
+.bk-transparent h4,
+.bk-transparent h5,
+.bk-transparent p,
+.bk-transparent ul li{
+    color: white;
+}
+
+.bk-main{
+    background: var(--main-color);
+}
+
+.bk-main h1,
+.bk-main h2,
+.bk-main h3,
+.bk-main h4,
+.bk-main h5,
+.bk-main p,
+.bk-main ul li{
+    color: white;
+}
+
+.bk-dark{
+    background: #05040d;
+}
+
+.bk-alt{
+    background: var(--secondary-color);
+}
+
+.bk-dark h1,
+.bk-dark h2,
+.bk-dark h3,
+.bk-dark h4,
+.bk-dark h5,
+.bk-dark p,
+.bk-dark span,
+.bk-dark ul li{
+    color: white;
+}
+
+.bk-light{
+    background-color: var(--light-blue);
+}
+
+
+.bk-light menu div{
+    background: var(--dark-text) !important;
+}
+/* padding */
+.av-padding-none{
+    padding: 0rem ;
+}
+
+.av-padding-mini{
+    padding: 1rem 0rem;
+}
+.av-padding-small{
+    padding: 3rem 0rem;
+}
+.av-padding-1x{
+    padding: 4rem 0rem;
+}
+.av-padding-2x{
+    padding: 8rem 0rem;
+}
+.av-padding-3x{
+    padding: 10rem 0rem;
+}
+
+.av-padding-4x{
+    padding: 13rem 0rem;
+}
+
+.av-padding-top-small{
+    padding-top: 3rem;
+}
+.av-padding-top-1x{
+    padding-top: 3rem;
+}
+.av-padding-top-2x{
+    padding-top: 6rem;
+}
+
+.av-padding-top-3x{
+    padding-top: 12rem;
+}
+
+.av-padding-bottom-small{
+    padding-bottom: 3rem;
+}
+.av-padding-bottom-1x{
+    padding-bottom: 3rem;
+}
+.av-padding-bottom-2x{
+    padding-bottom: 6rem;
+}
+
+.av-padding-bottom-3x{
+    padding-bottom: 12rem;
+}
+.av-padding-flush-top{
+    padding-top: 0rem !important;
+}
+.av-padding-flush-bottom{
+    padding-bottom: 0rem !important;
+}
+.av-padding-around-1x
+{
+    padding: 2rem;
+}
+
+/* height */
+.full-height{
+    height: 100vh;
+  }
+
+/* border */
+
+.border-bottom{
+    border-bottom: 1px solid var(--light-silver);
+}
+
+.border-top{
+    border-top: 1px solid var(--light-silver);
+}
+
+.border{
+    border: 1px solid var(--light-silver);
+}
+
+.main-shadow{
+    box-shadow: var(--shadow);
+}
+
+.error-msg{
+    color: rgb(235, 54, 54);
+    font-size: .8rem;
+    padding: .6rem 0rem;
+}
+/* 
+=======================================================
+END: GLOBAL
+=======================================================
+*/

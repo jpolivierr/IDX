@@ -1,0 +1,133 @@
+
+/* 
+=======================================================
+START: AV HEADER V1
+=======================================================
+*/
+.av-header-v1{
+    padding: 1rem 0rem;
+    /* position: fixed; */
+    width: 100%;
+    top: 0;
+    z-index: 5;
+    transition: .3s;
+    background: white;
+}
+
+.av-header-v1 .container figure{
+    max-width: 300px;
+}
+
+.av-header-v1 .container {
+    display: grid;
+    grid-template-columns: 1fr max-content max-content max-content;
+    align-items: center;
+    column-gap: 4.5rem;
+}
+
+.av-header-v1 .container section {
+    height: 100%;
+    border-bottom: 1px solid #ffffff59;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    padding: 0rem .5rem;
+}
+
+.av-header-v1 .container section ul{
+    display: flex;
+    column-gap: 2rem;
+}
+
+.av-header-v1 .container section ul a{
+    cursor: pointer;
+}
+
+
+/* 
+=======================================================
+END:
+=======================================================
+*/
+
+/* 
+=======================================================
+START: Nav List
+=======================================================
+*/
+
+.av-header-v1 .container  nav {
+    height: 100%;
+}
+.av-header-v1 .container  nav ul,
+header .container  nav ul{
+    display: flex;
+    column-gap: 2rem;
+    height: 100%;
+}
+
+.av-header-v1 .container nav ul li{
+    border: 2px solid transparent;
+    font-weight: 400;
+    padding: .3rem .5rem;
+    height: 100%;
+    cursor: pointer;
+    transition: .3s;
+    display: flex;
+   align-items: center;
+}
+
+.av-header-v1 .container nav ul li:hover{
+    background-color: #5a3bea12;
+}
+
+
+/* 
+=======================================================
+END:
+=======================================================
+*/
+
+/* 
+=======================================================
+START: Menu
+=======================================================
+*/
+
+.av-header-v1 .container menu{
+    display: flex;
+    width: 45px;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+    position: relative;
+    cursor: pointer;
+    padding: 9px 8px;
+    border-radius: 5px;
+  
+}
+
+.av-header-v1 .container menu div{
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 10px; 
+}
+
+.av-header-v1 .container menu div:nth-child(2){
+    width: 50%;
+    align-self: flex-end;
+}
+
+.av-header-v1 .container menu div:nth-child(3){
+    width: 100%;
+    align-self: flex-end;
+}
+
+/* 
+=======================================================
+END:
+=======================================================
+*/

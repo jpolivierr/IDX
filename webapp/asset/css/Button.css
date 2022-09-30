@@ -1,0 +1,70 @@
+/* 
+=======================================================
+START: Button
+=======================================================
+*/
+button{
+    border: none;
+    border-radius:  var(--border-radius);
+    padding: .7rem .8rem;
+    font-weight: 600;
+    background: var(--main-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: inherit;
+}
+
+.main-btn{
+    position: relative;
+    background: var(--main-color);
+    border: none;
+    color: white ;
+    font-weight: 600;
+    transition: .3s ease-in-out;
+}
+
+.main-btn:hover{
+    background: #00ea86;;
+}
+
+.secondary-btn{
+    position: relative;
+    background: var(--light-blue);
+    border: 1px solid var(--light-silver);
+    font-weight: 600;
+    color: var(--dark-text);
+    transition: .3s ease-in-out;
+}
+
+.secondary-btn:hover{
+    background: black;
+    color: white;
+}
+
+.btn-container{
+    display: flex;
+    gap: 1rem;
+}
+
+
+/* 
+=======================================================
+END:
+=======================================================
+*/
+/* 
+=======================================================
+START: Active Button Style
+=======================================================
+*/
+.av-active{
+    border-bottom: 2px solid var(--main-color) !important;
+    color: var(--main-color);
+}
+/* 
+=======================================================
+END:
+=======================================================
+*/

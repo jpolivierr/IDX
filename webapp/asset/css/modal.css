@@ -1,0 +1,117 @@
+.modal-bk{
+    background: rgba(7, 4, 17, 0.98);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+}
+
+.modal-bk-open{
+    display: block;
+    animation: modalBk .3s ease-in-out forwards;
+}
+
+@keyframes modalBk{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+.modal-bk-close{
+    display: block;
+    animation: modalBkClose .3s ease-in-out forwards;
+}
+
+@keyframes modalBkClose{
+    from{ 
+        opacity: 1;
+    }to{
+        opacity: 0;
+    }
+}
+
+/* 
+=======================================================
+START: side navigation
+=======================================================
+*/
+.close-btn{
+    transform: rotate(45deg);
+    display: block;
+    width: 30px;
+    font-size: 2rem;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    cursor: pointer;
+}
+.side-navigation{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 11;
+    display: none;
+    min-width: 300px;
+}
+
+.side-navigation ul li{
+    border-bottom: 1px solid #ffffff14;
+    padding: .5rem 0rem;
+}
+
+.side-navigation div{
+    margin-top: 2rem;
+}
+
+.side-navigation div section{
+    margin-bottom: 1rem;
+}
+
+.side-navigation div section h4{
+    margin-bottom: 1rem;
+}
+.side-navigation div section ul li{
+   margin-bottom: 1rem;
+}
+
+.side-navigation div section figure {
+   box-shadow: none;
+   max-width: 100px;
+}
+
+.open-sideNav{
+    display: block;
+    animation: slideOut .3s ease-in-out forwards;
+}
+
+@keyframes slideOut{
+    from{
+        right: -100%;
+    }to{
+        right: 0;
+    }
+}
+
+.close-sideNav{
+    display: block;
+    animation: slideIn .3s ease-in-out forwards;
+}
+
+@keyframes slideIn{
+    from{
+        right: 0;
+    }to{
+        right: -100%;
+    }
+}
+/* 
+=======================================================
+END: 
+=======================================================
+*/

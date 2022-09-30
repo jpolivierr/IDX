@@ -1,8 +1,8 @@
 <%@ page import ="java.net.URLDecoder" %>
-<section class="padding-xlarge bk-secondary-color full-height">
+<article class="column-1x center-content av-padding-3x bk-alt full-height">
 
-    <div class="container block-1column-center">  
-        <div class="forms register-form window">
+    <div class="container">  
+        <section class="window">
             
                 <%
                    Object encArray = request.getAttribute("errorMessage");
@@ -30,21 +30,35 @@
                      <% decArray = "";%>
                    <% }%> 
             
-            <h2>Create an Account</h2>
-            <p>80% of people save money by using Green Budget.</p>
-            <form action="register" method="POST">
-                <div class="form-input-field">
-                    <input value="<%= firstName %>" type="text" name="first_name" placeholder="First Name">
-                    <input value="<%= lastName %>" type="text" name="last_name" placeholder="Last Name">
-                    <input value="<%= email %>" type="text" name="email" placeholder="Email Address">
-                    <input type="password" name="password" placeholder="Password">
-                    <input type="password" name="password2" placeholder="Repeat Password">
-                </div>
+            
+            <form class="register-form" action="register" method="POST">
+                <h2>Create an Account</h2>
+                <p>80% of people save money by using Green Budget.</p>
+                    <fieldset>
+                        <label>First Name</label>
+                        <input value="<%= firstName %>"  name="first_name" type="text"/>
+                    </fieldset>
+                    <fieldset>
+                        <label>Last Name</label>
+                        <input value="<%= lastName %>" name="last_name" type="text"/>
+                    </fieldset>
+                    <fieldset>
+                        <label>Email</label>
+                        <input value="<%= email %>" name="last_name" type="email"/>
+                    </fieldset>
+                    <fieldset>
+                        <label>Password</label>
+                        <input name="password" type="password"/>
+                    </fieldset>
+                    <fieldset>
+                        <label>Repeat Password</label>
+                        <input name="password2" type="password"/>
+                    </fieldset>
                 
                 <button class="main-btn"> Get Started</button>
             </form>
             <p class="member-login-text">Already a member? <a href="#">Log in</a></p>
-        </div>
+        </section>
         
     </div>
-</section>
+</article>
