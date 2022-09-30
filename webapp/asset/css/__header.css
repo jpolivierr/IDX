@@ -70,6 +70,7 @@ header .container  nav ul{
 .av-header-v1 .container nav ul li{
     border: 2px solid transparent;
     font-weight: 600;
+    font-size: 1.3rem;
     padding: .3rem .5rem;
     height: 100%;
     cursor: pointer;

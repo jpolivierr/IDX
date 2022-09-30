@@ -6,8 +6,8 @@
             </figure>
             <nav>
                 <ul class="header-nav-list">
-                <li>Features</li>
-                <li>About Us</li>
+                <li>Demo</li>
+                <li>Benefits</li>
             </ul>
             </nav>
             

@@ -13,7 +13,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: inherit;
+    font-size: 1.3rem;
 }
 
 .main-btn{
@@ -46,6 +46,7 @@ button{
 .btn-container{
     display: flex;
     gap: 1rem;
+    margin-top: 2rem;
 }
 
 

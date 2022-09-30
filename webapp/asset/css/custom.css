@@ -33,6 +33,12 @@
     color: var(--main-color);
 }
 
+.hero{
+    margin: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
 .how-it-work .container section figure{
     margin: auto;
     width: 90px;
@@ -53,7 +59,7 @@
 }
 
 .how-it-work .container section:nth-child(2) figure{
-    background-color: var(--main-color);
+    background-color: #ebf3f5;
 }
 
 .how-it-work .container section:nth-child(3) figure{

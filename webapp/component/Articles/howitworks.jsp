@@ -1,4 +1,4 @@
-<article class="how-it-work border-radius column-3x-center bk-alt av-padding-2x">
+<article class="how-it-work column-3x-center bk-main av-padding-2x">
     <div class="container">
            
           <section>

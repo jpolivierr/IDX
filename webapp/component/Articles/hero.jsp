@@ -1,4 +1,4 @@
-<article id="hero" class="av-article-v1 av-padding-2x border-radius">
+<article class="av-article-v1 hero av-padding-2x border-radius">
     <div class="container">
         <section >
                 <h1>Gain Total Control of Your Money</h1>
