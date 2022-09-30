@@ -11,7 +11,7 @@ START: AV HEADER V1
     top: 0;
     z-index: 5;
     transition: .3s;
-    background: white;
+
 }
 
 .av-header-v1 .container figure{
@@ -69,7 +69,7 @@ header .container  nav ul{
 
 .av-header-v1 .container nav ul li{
     border: 2px solid transparent;
-    font-weight: 400;
+    font-weight: 600;
     padding: .3rem .5rem;
     height: 100%;
     cursor: pointer;
@@ -111,9 +111,9 @@ START: Menu
 
 .av-header-v1 .container menu div{
     width: 100%;
-    height: 2px;
-    background-color: white;
-    border-radius: 10px; 
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 100px; 
 }
 
 .av-header-v1 .container menu div:nth-child(2){

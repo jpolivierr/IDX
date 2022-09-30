@@ -32,3 +32,31 @@
 .logo{
     color: var(--main-color);
 }
+
+.how-it-work .container section figure{
+    margin: auto;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.how-it-work .container section figure img{
+    width: 60%;
+}
+
+.how-it-work .container section:nth-child(1) figure{
+     background-color: #fb6d4d;
+}
+
+.how-it-work .container section:nth-child(2) figure{
+    background-color: var(--main-color);
+}
+
+.how-it-work .container section:nth-child(3) figure{
+    background-color: #2a6eca;
+}
+

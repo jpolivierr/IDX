@@ -10,7 +10,7 @@ START: RESPONSIVE
 
 @media (max-width: 950px){
     .container{
-        width: 95%;
+        width: 87%;
     }
     /* article */
     .av-article-v2 .container{
@@ -173,6 +173,11 @@ START: RESPONSIVE
 
     .column-3x .container{
         display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+
+    .column-3x-center .container{
         grid-template-columns: 1fr;
         row-gap: 2rem;
     }

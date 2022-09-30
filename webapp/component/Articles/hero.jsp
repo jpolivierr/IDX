@@ -1,4 +1,4 @@
-<article id="hero" class="av-article-v1 av-padding-1x">
+<article id="hero" class="av-article-v1 av-padding-2x border-radius">
     <div class="container">
         <section >
                 <h1>Gain Total Control of Your Money</h1>
@@ -13,8 +13,7 @@
                 </div>
         </section>
         <figure>   
-                <img src="webapp/asset/media/images/banking.jpg" alt="">
+                <img src="webapp/asset/media/images/banking.png" alt="">
         </figure>
     </div>
-    <div class="shape"></div>
 </article>

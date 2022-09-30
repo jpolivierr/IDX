@@ -5,11 +5,12 @@
     --shadow-btn: 5px 5px 20px -11px #56628f2c;
   
     --text-color: #142149;
-    --text-color-light: #525666;
+    --text-color-light: #142149cc;
     --text-color-dark: #050913;
     --text-color-error: #ff4e4e;
 
-    --light-blue: #f9f9ff;
+    /* --light-blue: #f9f9ff; */
+    --light-blue: #ebf3f5;
     /* --light-silver: #ebecee; */
     --light-silver: #f1f3f4;
     --error-color: #ff000014;
