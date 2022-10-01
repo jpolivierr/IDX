@@ -42,23 +42,7 @@ START: RESPONSIVE
         z-index: 1;
     }
 
-
-
-    #idx .container{
-        grid-template-columns:1fr;
-    }
-
-    .hero .container .mobile{
-        width: 200px;
-        height: 490px;
-        max-height: 390px;
-        border-radius: 35px;
-    }
-
-    .hero .container .desktop{
-      
-        height: 450px;
-    }
+   
 }
 
 @media (max-width: 700px){
@@ -122,7 +106,7 @@ START: RESPONSIVE
     }
 
     .av-header-v1 .container figure{
-        max-width: 90px;
+        max-width: 300px;
     }
 
     .av-header-v1 .container{
@@ -246,20 +230,15 @@ START: RESPONSIVE
         height: 500px;
     }
 
-    .hero .container .mobile {
-        width: 100px;
-        height: 194px;
-        max-height: 390px;
-        border-radius: 18px;
-        left: 2%;
-        top: 30%;
-      }
+    .hero {
+        margin: 2rem 0rem;
+        margin-top: 0rem;
 
-      .hero .container .desktop{
-      
-        height: 250px;
-        width: 90%;
-        margin-right: .5rem;
+    }
+
+    /* custom */
+    .logo{
+        font-size: 2rem;
     }
 
 

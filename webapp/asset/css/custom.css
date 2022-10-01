@@ -31,6 +31,7 @@
 
 .logo{
     color: var(--main-color);
+    cursor: pointer;
 }
 
 .hero{
@@ -47,7 +48,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .how-it-work .container section figure img{
@@ -64,5 +65,10 @@
 
 .how-it-work .container section:nth-child(3) figure{
     background-color: #2a6eca;
+}
+
+.footer a{
+    font-weight: 400;
+    font-size: 1rem;
 }
 

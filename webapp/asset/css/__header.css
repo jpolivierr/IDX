@@ -27,7 +27,6 @@ START: AV HEADER V1
 
 .av-header-v1 .container section {
     height: 100%;
-    border-bottom: 1px solid #ffffff59;
     display: flex;
     justify-content: center;
     align-items: center;
