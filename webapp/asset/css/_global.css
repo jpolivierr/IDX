@@ -121,6 +121,10 @@ img{
     padding: 13rem 0rem;
 }
 
+.av-padding-5x{
+    padding: 16rem 0rem;
+}
+
 .av-padding-top-small{
     padding-top: 3rem;
 }
@@ -167,7 +171,7 @@ img{
 /* border */
 
 .border-bottom{
-    border-bottom: 1px solid var(--light-silver);
+    border-bottom: 1px solid #f1f3f459;
 }
 
 .border-top{

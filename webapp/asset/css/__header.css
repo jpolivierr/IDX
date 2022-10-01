@@ -6,7 +6,7 @@ START: AV HEADER V1
 */
 .av-header-v1{
     padding: 1rem 0rem;
-    /* position: fixed; */
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 5;
@@ -20,7 +20,7 @@ START: AV HEADER V1
 
 .av-header-v1 .container {
     display: grid;
-    grid-template-columns: 1fr max-content max-content max-content;
+    grid-template-columns: 1fr max-content max-content;
     align-items: center;
     column-gap: 4.5rem;
 }
@@ -95,7 +95,7 @@ START: Menu
 */
 
 .av-header-v1 .container menu{
-    display: flex;
+    display: none;
     width: 45px;
     height: 40px;
     justify-content: space-between;

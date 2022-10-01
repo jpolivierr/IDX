@@ -1,4 +1,4 @@
-<header class="av-header-v1 ">
+<header class="av-header-v1 bk-transparent border-bottom ">
  
         <div class="container">
             <a href="/">
@@ -14,8 +14,11 @@
             </nav>
             
             <section class="header-nav-user">
-                <jsp:include page="/webapp/component/Buttons/main-btn.jsp"/> 
-                <jsp:include page="/webapp/component/Buttons/secondary-btn.jsp"/> 
+                <div class="btn-container">
+                    <jsp:include page="/webapp/component/Buttons/main-btn.jsp"/> 
+                <jsp:include page="/webapp/component/Buttons/secondary-btn.jsp"/>
+                </div>
+                 
             </section>
             <menu>
                 <div></div>

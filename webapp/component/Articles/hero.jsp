@@ -1,4 +1,4 @@
-<article class="av-article-v1 hero av-padding-2x">
+<article style="background: url(/webapp/asset/media/images/house.jpg) no-repeat center center/cover;" class="av-article-v1 hero bk-transparent av-padding-5x">
     <div class="container">
         <section >
                 <h1>Gain Total Control of Your Money</h1>

@@ -5,12 +5,20 @@
     --shadow-btn: 5px 5px 20px -11px #56628f2c;
 
     --p-size: 1.1rem;
-    --h1-size: 4rem;
-    --h2-size: 3rem;
-    --h3-size: 2rem;
+    --h1-size: 3rem;
+    --h2-size: 2rem;
+    --h3-size: 1rem;
     --h4-size: 1rem;
     --list-size: 1.1rem;
     --btn-label-size: inherit;
+
+    --p-weight: 400;
+    --list-weight: 400;
+    --h1-weight: 800;
+    --h2-weight: 800;
+    --h3-weight: 600;
+    --h4-weight: 600;
+    --btn-label-weight: 500;
   
     --text-color: #142149;
     --text-color-light: #142149cc;
@@ -27,7 +35,7 @@
     --secondary-color: #fff9f1;
     --secondary-color: #fbefdf;
 
-    --border-radius : 5px;
+    --border-radius : 100px;
 
     --modal-bk-color: #2a2b2ebf;
   
