@@ -1,4 +1,4 @@
-<header class="av-header-v1 av-padding-top-small">
+<header class="av-header-v1 ">
  
         <div class="container">
             <a href="/">
@@ -9,18 +9,13 @@
             
             <nav>
                 <ul class="header-nav-list">
-                <li><a href="/demo">Demo</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-            </ul>
+                 <jsp:include page="/webapp/component/List/top-nav-list.jsp"/> 
+               </ul>
             </nav>
             
             <section class="header-nav-user">
-                <a href="/userlogin" >
-                    <button class="main-btn">Log in</button>
-                </a>
-                <a href="/register">
-                    <button class="secondary-btn">Get Started</button>
-                </a>
+                <jsp:include page="/webapp/component/Buttons/main-btn.jsp"/> 
+                <jsp:include page="/webapp/component/Buttons/secondary-btn.jsp"/> 
             </section>
             <menu>
                 <div></div>

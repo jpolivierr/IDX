@@ -5,7 +5,7 @@ START: Article
 */
 .av-article-v1{
     padding: 5rem 0rem;
-    background: white;
+    background: transparent;
 }
 
 .av-article-v1 .container{

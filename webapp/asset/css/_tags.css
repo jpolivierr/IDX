@@ -13,13 +13,13 @@ START: UTIL
  }
 
  h1{
-  font-size: 4rem;
+  font-size: var(--h1-size);
   margin-bottom: 2rem;
   max-width: 1000px;
 }
 
  h2{
-   font-size: 3rem;
+  font-size: var(--h2-size);
    margin-bottom: 1rem;
    /* max-width: 600px; */
    line-height: 1.3;
@@ -29,12 +29,12 @@ START: UTIL
  h3{
    font-weight: 600;
    margin-bottom: .9rem;
-   font-size: .9rem;
+   font-size: var(--h3-size);
   
  }
 
  h4{
-  font-size: 2rem;
+  font-size: var(--h4-size);
    margin-bottom: 1rem;
  }
 
@@ -44,7 +44,11 @@ START: UTIL
    max-width: 500px;
    font-weight: 500;
    color: var(--text-color-light);
-   font-size: 1.3rem;
+   font-size: var(--p-size);
+ }
+
+ ul li{
+  font-size:  var(--list-size);
  }
 
  label{

@@ -3,6 +3,14 @@
     --shadow-hard: 0px 10px 79px 20px rgba(179, 182, 185, 0.356);
     --shadow-soft : 10px 0px 50px -30px #4264889c;
     --shadow-btn: 5px 5px 20px -11px #56628f2c;
+
+    --p-size: 1.1rem;
+    --h1-size: 4rem;
+    --h2-size: 3rem;
+    --h3-size: 2rem;
+    --h4-size: 1rem;
+    --list-size: 1.1rem;
+    --btn-label-size: inherit;
   
     --text-color: #142149;
     --text-color-light: #142149cc;
