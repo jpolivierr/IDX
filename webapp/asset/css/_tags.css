@@ -56,7 +56,7 @@ START: UTIL
  }
 
  label{
-  font-weight: 450;
+  font-weight: var(--label-weight);
   color: var(--text-color);
  }
 

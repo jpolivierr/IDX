@@ -6,6 +6,7 @@ START: Article
 .av-article-v1{
     padding: 5rem 0rem;
     background: transparent;
+    position: relative;
 }
 
 .av-article-v1 .container{
@@ -13,6 +14,10 @@ START: Article
     grid-template-columns: .8fr 1fr;
     align-items: center;
     column-gap: 2rem;
+}
+
+.av-article-v1 .container section{
+    z-index: 1;
 }
 
 .av-article-v2{

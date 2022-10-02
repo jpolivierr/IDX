@@ -16,6 +16,9 @@ START: AV HEADER V1
 
 .av-header-v1 .container figure{
     max-width: 300px;
+width: max-content;
+background: white;
+padding: 1rem;
 }
 
 .av-header-v1 .container {

@@ -1,13 +1,13 @@
 :root{
-    --shadow :  0px 20px 40px #c9c9c92d;
+    --shadow :  0px 20px 40px #82bbcc2e;
     --shadow-hard: 0px 10px 79px 20px rgba(179, 182, 185, 0.356);
     --shadow-soft : 10px 0px 50px -30px #4264889c;
-    --shadow-btn: 5px 5px 20px -11px #56628f2c;
+    --shadow-btn: 8px 15px 20px -5px #82bbcc99;
 
     --p-size: 1.1rem;
-    --h1-size: 3rem;
-    --h2-size: 2rem;
-    --h3-size: 1rem;
+    --h1-size: 4rem;
+    --h2-size: 3rem;
+    --h3-size: 2rem;
     --h4-size: 1rem;
     --list-size: 1.1rem;
     --btn-label-size: inherit;
@@ -16,26 +16,27 @@
     --list-weight: 400;
     --h1-weight: 800;
     --h2-weight: 800;
-    --h3-weight: 600;
+    --h3-weight: 800;
     --h4-weight: 600;
-    --btn-label-weight: 500;
+    --label-weight: 600;
+    --btn-label-weight: 800;
   
     --text-color: #142149;
-    --text-color-light: #142149cc;
+    --text-color-light: #142149a1;
     --text-color-dark: #050913;
     --text-color-error: #ff4e4e;
 
-    /* --light-blue: #f9f9ff; */
-    --light-blue: #ebf3f5;
-    /* --light-silver: #ebecee; */
+    --light-blue: #def4fda1;
+    --light-blue-v2: #bed4d9;
     --light-silver: #f1f3f4;
     --error-color: #ff000014;
 
-    --main-color : #00b568;; 
+    --main-color : #ff0965; 
     --secondary-color: #fff9f1;
     --secondary-color: #fbefdf;
 
     --border-radius : 100px;
+    --border-radius-v2 : 20px;
 
     --modal-bk-color: #2a2b2ebf;
   

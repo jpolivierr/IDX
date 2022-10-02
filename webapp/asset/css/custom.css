@@ -3,3 +3,217 @@
     font-weight: bold;
     font-size: 1.5rem;
 }
+
+.hero{
+    position: relative
+}
+
+.hero::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgb(254,254,254);
+    background: linear-gradient(266deg, rgba(254,254,254,0) 0%, rgba(0, 0, 0, 0.52) 100%);  */
+}
+
+.quick-search{
+    position: absolute;
+    bottom: -119px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
+    max-width: 1658px;
+    background: white;
+    padding: 2rem 2.6rem;
+    border-radius: var(--border-radius-v2);
+}
+
+.quick-search form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr .3fr;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.quick-search form fieldset{
+    margin: 0;
+}
+
+.quick-search form fieldset:nth-child(1){
+    grid-column: 1 / 6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1421491f;
+    padding-bottom: 1rem;
+}
+
+.quick-search form fieldset:nth-child(1) h3{
+    color: var(--text-color);
+    margin: 0;
+}
+
+.quick-search form fieldset:nth-child(1) ul{
+    
+    display: flex;
+    gap: 1rem;
+}
+
+.q-active{
+    color: var(--main-color) !important;
+    border-bottom: 2px solid var(--main-color);
+}
+
+.quick-search form fieldset:nth-child(1) ul li{
+    color: var(--text-color);
+    padding: .4rem .1rem;
+    font-weight: 600;
+    font-size: .8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+.quick-search form fieldset:nth-child(1) ul li:hover{
+    background: var(--light-blue);
+}
+
+.quick-search form fieldset{
+    position: relative;
+}
+
+.quick-search form fieldset i{
+ position: absolute;
+ right: 35px;
+ bottom: 15px;
+}
+
+.quick-search form fieldset label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.quick-search form fieldset label i{
+    margin-right: .5rem;
+    color: var(--light-blue-v2);
+}
+
+.quick-search form fieldset input{
+    background: transparent;
+    /* border-bottom: 1px solid silver; */
+    padding: 1rem 0rem;
+}
+
+.quick-search form fieldset input::placeholder{
+    color: var(--text-color-light);
+    font-size: var(--p-size);
+}
+
+.quick-search form button{
+    width: 50px;
+    height: 50px;
+    justify-self: center;
+    margin: 0;
+    box-shadow: var(--shadow-btn);
+}
+
+.av-slider{
+    margin-top: 2rem;
+}
+
+.av-slider-container{
+    display: flex;
+    column-gap: 1rem;
+}
+
+.slider-block{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.slider-block figure{
+    position: relative;
+}
+
+.slider-block figure span{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: .1rem .6rem;
+    font-size: .7rem;
+    background-color: var(--text-color);
+    color: white;
+    font-weight: bold;
+    border-radius: 100px;
+    text-transform: uppercase;
+}
+.slider-block .av-property-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    padding: 1rem;
+}
+
+.slider-block .av-property-details h4{
+    grid-column: 1 / 3;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    align-self: center;
+}
+
+.slider-block .av-property-details i{
+    grid-column: 3 / 4;
+    align-self: center;
+    font-size: 1.5rem;
+    justify-self: flex-end;
+    margin-bottom: 1rem;
+}
+
+.slider-block .av-property-details h5{
+    text-align: left;
+    font-size: var(--p-size);
+    font-weight: normal;
+    color: var(--text-color-light);
+}
+
+.slider-block .av-property-details h5 span{
+    font-weight: bold;
+}
+
+.slider-block .av-property-details p{
+    text-align: left;
+    grid-column: 1 / 4;
+    margin: 0;
+    margin-top: .6rem;
+}
+
+h2{
+    display: flex;
+    flex-flow: column;
+}
+
+h2 span{
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:  var(--text-color-light);
+    margin-bottom: 1rem;
+}
+
+h2 span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100px;
+    margin: auto;
+    width: 50px;
+    height: 2px;
+    background: var(--main-color);
+}

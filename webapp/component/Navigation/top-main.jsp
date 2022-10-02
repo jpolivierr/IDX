@@ -3,7 +3,7 @@
         <div class="container">
             <a href="/">
                 <figure class="logo">
-                Green Budget
+                IDX realty
             </figure>
             </a>
             

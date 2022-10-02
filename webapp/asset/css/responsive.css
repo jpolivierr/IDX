@@ -61,44 +61,7 @@ START: RESPONSIVE
         font-size: .9rem;
         max-width: 100% !important;
     }
-    /* padding */
-    .av-padding-flush-top{
-        padding-top: 0rem !important;
-    }
 
-    .av-padding-mini{
-        padding: 1rem 0rem !important;
-    }
-    
-    .av-padding-small{
-        padding: 3rem 0rem !important;
-    }
-
-    .av-padding-3x{
-        padding: 6rem 0rem !important;
-    }
-
-    .av-padding-flush-bottom{
-        padding-bottom: 0rem !important;
-    }
-
-    .av-padding-side-1x
-    {
-        padding-right: 4rem !important;
-        padding-left: 4rem !important;
-    }
-
-    .av-padding-top-3x{
-        padding-top: 6rem !important;
-    }
-
-    .av-padding-4x{
-        padding: 5rem 0rem;
-    }
-
-    .av-padding-bottom-3x{
-        padding-bottom: 6rem;
-    }
 
     /* header */
     .av-header-v1{
@@ -187,6 +150,49 @@ START: RESPONSIVE
         padding: 0rem;
     }
 
+    /* padding */
+    .av-padding-flush-top{
+        padding-top: 0rem !important;
+    }
+
+    .av-padding-mini{
+        padding: 1rem 0rem !important;
+    }
+    
+    .av-padding-small{
+        padding: 3rem 0rem !important;
+    }
+
+    .av-padding-3x{
+        padding: 6rem 0rem !important;
+    }
+
+    .av-padding-flush-bottom{
+        padding-bottom: 0rem !important;
+    }
+
+    .av-padding-side-1x
+    {
+        padding-right: 4rem !important;
+        padding-left: 4rem !important;
+    }
+
+    .av-padding-top-3x{
+        padding-top: 6rem !important;
+    }
+
+    .av-padding-4x{
+        padding: 5rem 0rem;
+    }
+
+    .av-padding-5x{
+        padding: 10rem 0rem;
+    }
+
+    .av-padding-bottom-3x{
+        padding-bottom: 6rem;
+    }
+
     /* special */
 
     .skills section:nth-child(2)::before,
@@ -228,12 +234,6 @@ START: RESPONSIVE
 
     .shape{
         height: 500px;
-    }
-
-    .hero {
-        margin: 2rem 0rem;
-        margin-top: 0rem;
-
     }
 
     /* custom */

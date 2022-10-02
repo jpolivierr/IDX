@@ -6,8 +6,8 @@
     <!-- Hero Section -->
     <jsp:include page="webapp/component/Articles/hero.jsp"/> 
 
-     <!-- How it works Section -->
-     <!-- <jsp:include page="webapp/component/Articles/howitworks.jsp"/>  -->
+     <!-- Listing Section -->
+     <jsp:include page="webapp/component/Articles/listing.jsp"/> 
 
      <!-- Finances Section -->
      <!-- <jsp:include page="webapp/component/Articles/finances.jsp"/>  -->
