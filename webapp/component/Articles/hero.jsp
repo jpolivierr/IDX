@@ -6,16 +6,9 @@
                 <div class="btn-container">
                     <a href="/demo">
                         <button class="main-btn">
-                            See a Demo
+                            Find my home
                          </button>
-                    </a>
-
-                <a href="/register">
-                    <button class="secondary-btn">
-                                        Sign up
-                                    </button>
-                </a>    
-                
+                    </a>  
                 </div>
         </section>
         <figure>   

@@ -1,5 +1,10 @@
-<div class="av-slider">
+<section class="av-slider-window">
+            <div class="slider-ctl av-slider-next"><i class="fa-solid fa-caret-right"></i></div>
+        <div class="slider-ctl av-slider-prev"><i class="fa-solid fa-caret-left"></i></div>
+
+    <div class="av-slider">
     <div class="av-slider-container">
+      
         <div class="slider-block">
             <figure>
                 <span>Active</span>
@@ -60,6 +65,52 @@
             </div>
         </div>
 
+        <div class="slider-block">
+            <figure>
+                <span>Active</span>
+                <img src="/webapp/asset/media/images/house_4.jpg" alt="">
+            </figure>
+            <div class="av-property-details">
+                <h4>$190,00</h4>
+                <i class="fa-regular fa-heart"></i>
+                <h5><span>5</span> Beds</h5>
+                <h5><span>4</span> Beds</h5>
+                <h5><span>2,4894</span> Sq.Ft.</h5>
+                <p>93 Meillway, Jacksonville, FL 3221</p>
+            </div>
+        </div>
+
+        <!-- <div class="slider-block">
+            <figure>
+                <span>Active</span>
+                <img src="/webapp/asset/media/images/house_4.jpg" alt="">
+            </figure>
+            <div class="av-property-details">
+                <h4>$290,00</h4>
+                <i class="fa-regular fa-heart"></i>
+                <h5><span>5</span> Beds</h5>
+                <h5><span>4</span> Beds</h5>
+                <h5><span>2,4894</span> Sq.Ft.</h5>
+                <p>93 Meillway, Jacksonville, FL 3221</p>
+            </div>
+        </div>
+
+        <div class="slider-block">
+            <figure>
+                <span>Active</span>
+                <img src="/webapp/asset/media/images/house_4.jpg" alt="">
+            </figure>
+            <div class="av-property-details">
+                <h4>$290,00</h4>
+                <i class="fa-regular fa-heart"></i>
+                <h5><span>5</span> Beds</h5>
+                <h5><span>4</span> Beds</h5>
+                <h5><span>2,4894</span> Sq.Ft.</h5>
+                <p>93 Meillway, Jacksonville, FL 3221</p>
+            </div> 
+        </div> -->
+
 
     </div>
 </div>
+</section>

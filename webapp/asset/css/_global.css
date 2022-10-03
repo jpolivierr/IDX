@@ -69,12 +69,14 @@ img{
     color: white;
 }
 
-.bk-dark{
-    background: #05040d;
-}
+
 
 .bk-alt{
-    background: var(--secondary-color);
+    background: white;
+}
+
+.bk-dark{
+    background: #05040d;
 }
 
 .bk-dark h1,

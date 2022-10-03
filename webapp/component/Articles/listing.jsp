@@ -8,9 +8,7 @@
             </h2>
           </section>
 
-          <section>
             <jsp:include page="/webapp/component/Sliders/slider.jsp"/> 
-           </section>
         
     </div>
 </article>
