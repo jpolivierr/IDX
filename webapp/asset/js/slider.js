@@ -4,6 +4,7 @@ class Slider{
         this.container = document.querySelector('.av-slider-container')
         this.prevNext = document.querySelector('.av-slider-next')
         this.prevPrev = document.querySelector('.av-slider-prev')
+        this.windowWidth = null
         this.containerWidth = null 
         this.blockWidth = null
         this.blockCount = document.querySelectorAll('.slider-block').length
@@ -22,50 +23,44 @@ class Slider{
     }
 
     next(){ 
-        
-        this.blockWidth = (this.Window.offsetWidth / 4.19).toFixed(2)
-        this.containerWidth = (this.container.offsetWidth).toFixed(2)
-        const gap = (this.containerWidth - (this.blockWidth * this.blockCount)) / (this.blockCount - 1)
+        this.windowWidth = this.Window.offsetWidth
+        this.blockWidth = (this.Window.offsetWidth / 4.19).toFixed(0)
+        this.containerWidth = (this.container.offsetWidth).toFixed(0)
+        const gap = (this.containerWidth - (this.blockWidth * this.blockCount)) / (this.blockCount -1)
+        const count = (-this.blockWidth - gap) + this.position
+        this.position = Number(count.toFixed(2))
+        this.container.style.left = `${this.position.toFixed(0)}px`
 
-        this.position = - this.blockWidth + this.position
-        this.container.style.left = `${this.position - gap}px`
 
-        const totalBlockWidth = this.blockWidth * this.blockCount
-        const totalWindowWidth = this.Window.offsetWidth
-        const totalGap = (this.blockWidth * this.blockCount) / this.blockCount
-        console.log(totalGap)
-    console.log((this.position.toFixed(2) - (Number(this.containerWidth))) + totalBlockWidth )
         this.hideCtlBtn()
     }
 
     prev(){
-        
-        this.blockWidth = (this.Window.offsetWidth / 4.19).toFixed(2)
-        this.containerWidth = (this.container.offsetWidth).toFixed(2)
-        const gap = (this.containerWidth - (this.blockWidth * this.blockCount)) / this.blockCount
-        this.position = +this.blockWidth + this.position
-        this.container.style.left = `${this.position.toFixed(2)}px` 
+        this.windowWidth = this.Window.offsetWidth
+        this.blockWidth = (this.Window.offsetWidth / 4.19).toFixed(0)
+        this.containerWidth = (this.container.offsetWidth).toFixed(0)
+        const gap = (this.containerWidth - (this.blockWidth * this.blockCount)) / (this.blockCount -1)
 
-        const totalBlockWidth = this.blockWidth * this.blockCount
-        const totalWindowWidth = this.Window.offsetWidth
+        const count = (+this.blockWidth + gap) + this.position
+        this.position = Number(count.toFixed(2))
+        this.container.style.left = `${this.position.toFixed(0)}px` 
 
-        console.log(`Position : ${this.position.toFixed(2)}`)
-        console.log(`total block width: ${totalBlockWidth.toFixed(2)}`)
-        console.log(`total slider width: ${totalWindowWidth}`)
-
-        console.log(this.position.toFixed(2))
         this.hideCtlBtn()
     }
 
     hideCtlBtn(){
+        const totalBlockWidth = this.blockWidth * this.blockCount
+        const remainingBlock = Number(this.containerWidth) + (this.position.toFixed(0) - (Number(this.windowWidth)))
+        console.log(this.position)
+
         if(Number(this.position) < 0){
             this.prevPrev.style.display = 'flex'
         }else{
             this.prevPrev.style.display = 'none'
         }
 
-        if(Number(this.position) >= 0){
-            this.prevNext.style.display = 'flex'
+        if(Number(remainingBlock) < 10 && remainingBlock !== 0){
+            this.prevNext.style.display = 'none'
         }else{
             this.prevNext.style.display = 'flex'
         }
@@ -74,13 +69,20 @@ class Slider{
     addBlockWidth(){
         !this.Window.querySelector('style') ? null : this.Window.querySelector('style').remove()
 
-        let mainWith = document.querySelector('.av-slider-window').offsetWidth
+        let mainWith = document.querySelector('.av-slider-window').offsetWidth.toFixed(2)
+        const blockWidth = (mainWith / 4.19).toFixed(2)
         const style = document.createElement('style');
+        console.log(mainWith)
         style.textContent = `
             .slider-block{
-                width: ${(mainWith / 4.19).toFixed(2)}px
+                width: ${blockWidth}px
             }
         `
+        // style.textContent = `
+        //     .slider-block{
+        //         width: ${(mainWith / 4.12).toFixed(0)}px
+        //     }
+        // `
         this.Window.appendChild(style)
     }
 

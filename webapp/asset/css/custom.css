@@ -151,6 +151,7 @@ h2 span::before{
     position: relative;
     width: 100%;
     margin-top: 2rem;
+    /* border: 1px solid red; */
 }
 
 .av-slider{
@@ -164,9 +165,9 @@ h2 span::before{
     position: absolute; 
     top: 0;
     display: flex;
-    gap: 1rem;
     transition: .2s ease-in-out;
     left: 0;
+    /* border: 1px solid blue; */
 }
 
 .slider-ctl{
@@ -189,11 +190,11 @@ h2 span::before{
 }
 
 .av-slider-next{
-   right: -25px ;
+   right: -100px ;
 }
 
 .av-slider-prev{
-    left: -25px ;
+    left: -100px ;
 }
 
 .slider-block{
@@ -201,6 +202,15 @@ h2 span::before{
     overflow: hidden;
     box-shadow: var(--shadow);
     cursor: pointer;
+    margin-right: 1rem;
+}
+
+.slider-block:nth-child(1){
+    /* margin-left: 1rem; */
+}
+
+.slider-block:last-child{
+    margin-right: 0rem ;
 }
 
 .slider-block figure{
