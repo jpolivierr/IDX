@@ -127,6 +127,8 @@ h2{
     flex-flow: column;
 }
 
+
+
 h2 span{
     position: relative;
     font-size: 1.2rem;
@@ -135,6 +137,7 @@ h2 span{
     margin-bottom: 1rem;
     width: max-content;
     margin: auto;
+    margin-bottom: 1rem;
 }
 
 h2 span::before{
@@ -142,11 +145,65 @@ h2 span::before{
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 80px;
+    right: 120%;
     margin: auto;
     width: 35px;
     height: 2px;
     background: var(--main-color);
+}
+
+.left-h2 span{
+    margin-left: 16%;
+}
+.smart-home figure{
+    position: relative;
+    min-height: 500px;
+}
+
+.smart-home figure::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 450px;
+    height: 450px;
+    border-radius: 100px;
+    background: #a4e3fd52;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    transform: rotate(45deg);
+}
+
+
+
+.smart-home figure img{
+    position: absolute;
+    border-radius: var(--border-radius-v2);
+    box-shadow: var(--shadow-hard);
+    z-index: 1;
+}
+
+.smart-home figure img:nth-child(1){
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 63%
+}
+
+.smart-home figure img:nth-child(2){
+    left: 0;
+top: 3%;
+margin: auto;
+width: 55%;
+}
+
+.smart-home figure img:nth-child(3){
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .av-slider-window{
@@ -275,3 +332,15 @@ h2 span::before{
     margin-top: .6rem;
 }
 
+.footer ul {
+    display: flex;
+}
+
+.footer ul li{
+    border-right: 1px dotted white;
+    padding: 0rem 2rem;
+}
+
+.footer ul li:last-child{
+    border-right: none;
+}

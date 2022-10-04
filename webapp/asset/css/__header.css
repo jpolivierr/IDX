@@ -119,6 +119,8 @@ START: Menu
     border-radius: 100px; 
 }
 
+
+
 .av-header-v1 .container menu div:nth-child(2){
     width: 50%;
     align-self: flex-end;
@@ -129,6 +131,9 @@ START: Menu
     align-self: flex-end;
 }
 
+.menu-color div{
+    background-color: var(--text-color) !important;
+}
 /* 
 =======================================================
 END:

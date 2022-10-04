@@ -1,6 +1,6 @@
 :root{
-    --shadow :  0px 20px 40px #82bbcc2e;
-    --shadow-hard: 0px 10px 79px 20px rgba(179, 182, 185, 0.356);
+    --shadow :  0px 5px 40px #82bbcc2e;
+    --shadow-hard:  0px 25px 40px #557b867a;
     --shadow-soft : 10px 0px 50px -30px #4264889c;
     --shadow-btn: 8px 15px 20px -5px #82bbcc99;
 
@@ -26,7 +26,7 @@
     --text-color-dark: #050913;
     --text-color-error: #ff4e4e;
 
-    --light-blue: #def4fda1;
+    --light-blue: #a4e3fd96;
     --light-blue-v2: #bed4d9;
     --light-silver: #f1f3f4;
     --error-color: #ff000014;

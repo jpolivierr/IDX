@@ -1,19 +1,3 @@
-// Header background effect
-(headerEffect =(headerClass) =>{
-    let header =  document.querySelector(`${headerClass}`)
-    window.onscroll = function(){
-        "use strict";
-    if (document.body.scrollTop >= 76 || document.documentElement.scrollTop >= 76) {
-        header.classList.add("bk-alt");
-        header.classList.add("border-bottom");
-        header.classList.remove("bk-transparent");
-    } else {
-        header.classList.add("bk-transparent");
-        header.classList.remove("border-bottom");
-        header.classList.remove("bk-alt");
-    }
-    }
-})(".av-header-v1");
 
 // Modal
 class Modal{

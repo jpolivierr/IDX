@@ -1,4 +1,4 @@
-<footer class="column-1x- center-content bk-dark av-padding-small ">
+<footer class="column-1x- footer center-content bk-dark av-padding-small ">
     <div class="container ">
         <section>
             <nav>

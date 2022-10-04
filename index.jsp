@@ -9,8 +9,11 @@
      <!-- Listing Section -->
      <jsp:include page="webapp/component/Articles/listing.jsp"/> 
 
-     <!-- Finances Section -->
-     <!-- <jsp:include page="webapp/component/Articles/finances.jsp"/>  -->
+     <!-- Dream HOme Section -->
+     <jsp:include page="webapp/component/Articles/dreamhome.jsp"/> 
+
+     <!-- More info Section -->
+     <jsp:include page="webapp/component/Articles/moreInfo.jsp"/> 
 
      <!-- Footer Navigation -->
      <jsp:include page="webapp/component/Navigation/bottom-main.jsp"/>

@@ -55,7 +55,7 @@ START: COLUMNS
 =======================================================
 */
 .columns-reverse .container {
-    grid-template-columns: 1fr .6fr ;
+    grid-template-columns: 1fr .8fr ;
 }
 
 .columns-reverse .container figure{

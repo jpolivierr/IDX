@@ -23,7 +23,7 @@ START: UTIL
   font-size: var(--h2-size);
   font-weight: var(--h2-weight);
    margin-bottom: 1rem;
-   /* max-width: 600px; */
+   max-width: 400px;
    line-height: 1.3;
  }
 
