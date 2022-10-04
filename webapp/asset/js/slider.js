@@ -10,6 +10,7 @@ class Slider{
         this.blockCount = document.querySelectorAll('.slider-block').length
         this.gap = null
         this.position = 0
+        this.frac = 4.15;
         this.init()
     }
 
@@ -24,10 +25,13 @@ class Slider{
 
     next(){ 
         this.windowWidth = this.Window.offsetWidth
-        this.blockWidth = (this.Window.offsetWidth / 4.19).toFixed(0)
+        this.blockWidth = (this.Window.offsetWidth / this.frac ).toFixed(0)
         this.containerWidth = (this.container.offsetWidth).toFixed(0)
+        
         const gap = (this.containerWidth - (this.blockWidth * this.blockCount)) / (this.blockCount -1)
+
         const count = (-this.blockWidth - gap) + this.position
+
         this.position = Number(count.toFixed(2))
         this.container.style.left = `${this.position.toFixed(0)}px`
 
@@ -37,7 +41,7 @@ class Slider{
 
     prev(){
         this.windowWidth = this.Window.offsetWidth
-        this.blockWidth = (this.Window.offsetWidth / 4.19).toFixed(0)
+        this.blockWidth = (this.Window.offsetWidth / this.frac ).toFixed(0)
         this.containerWidth = (this.container.offsetWidth).toFixed(0)
         const gap = (this.containerWidth - (this.blockWidth * this.blockCount)) / (this.blockCount -1)
 
@@ -66,23 +70,46 @@ class Slider{
         }
     }
 
-    addBlockWidth(){
-        !this.Window.querySelector('style') ? null : this.Window.querySelector('style').remove()
+    resizeOnScreenEvent(){
+        this.container.classList.add("position-left")
+        this.position = 0
+        this.container.style.left = 0
+         if(window.innerWidth > 1202){
+            this.frac = 4.19
+        }
+        if(window.innerWidth <= 1202){
+            this.frac = 3.10
+        }
+        if(window.innerWidth >= 1501){
+                    this.frac = 4.12
+                }
 
+        if(window.innerWidth <= 966){
+            this.frac = 3.14
+        }
+        if(window.innerWidth <= 832){
+            this.frac = 2.05
+        }
+        if(window.innerWidth <= 620){
+            this.frac = 1.5
+        }
+    }
+
+    addBlockWidth(){
+         
+        this.resizeOnScreenEvent()
+       
+        !this.Window.querySelector('style') ? null : this.Window.querySelector('style').remove()
+       
         let mainWith = document.querySelector('.av-slider-window').offsetWidth.toFixed(2)
-        const blockWidth = (mainWith / 4.19).toFixed(2)
+        const blockWidth = (mainWith / this.frac).toFixed(2)
         const style = document.createElement('style');
-        console.log(mainWith)
+        
         style.textContent = `
             .slider-block{
                 width: ${blockWidth}px
             }
         `
-        // style.textContent = `
-        //     .slider-block{
-        //         width: ${(mainWith / 4.12).toFixed(0)}px
-        //     }
-        // `
         this.Window.appendChild(style)
     }
 

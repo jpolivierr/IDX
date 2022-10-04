@@ -195,6 +195,15 @@ START: RESPONSIVE
 
     /* special */
 
+    .slider-ctl{
+        display: none !important;
+    }
+
+    .av-slider{
+        overflow-x: scroll;
+        height: 390px;
+    }
+
     .skills section:nth-child(2)::before,
     .skills section:nth-child(3)::before,
     .skills section:nth-child(4)::before{
