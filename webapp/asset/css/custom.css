@@ -131,8 +131,10 @@ h2 span{
     position: relative;
     font-size: 1.2rem;
     font-weight: 600;
-    color:  var(--text-color-light);
+    color: var(--text-color-light);
     margin-bottom: 1rem;
+    width: max-content;
+    margin: auto;
 }
 
 h2 span::before{
@@ -140,9 +142,9 @@ h2 span::before{
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 100px;
+    right: 80px;
     margin: auto;
-    width: 50px;
+    width: 35px;
     height: 2px;
     background: var(--main-color);
 }

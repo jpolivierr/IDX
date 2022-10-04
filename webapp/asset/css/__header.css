@@ -115,7 +115,7 @@ START: Menu
 .av-header-v1 .container menu div{
     width: 100%;
     height: 3px;
-    background-color: var(--text-color);
+    background-color: white;
     border-radius: 100px; 
 }
 

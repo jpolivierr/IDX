@@ -12,7 +12,7 @@
      <!-- Finances Section -->
      <!-- <jsp:include page="webapp/component/Articles/finances.jsp"/>  -->
 
-     <!-- Footer Section -->
-     <!-- <jsp:include page="webapp/component/Navigation/bottom-main.jsp"/> -->
+     <!-- Footer Navigation -->
+     <jsp:include page="webapp/component/Navigation/bottom-main.jsp"/>
 
 <jsp:include page="footer.jsp"/> 

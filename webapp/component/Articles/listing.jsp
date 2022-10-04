@@ -1,4 +1,4 @@
-<article id="listings" class=" column-1x-center av-padding-5x">
+<article id="listings" class="listings column-1x-center av-padding-5x">
     <div class="container">
            
           <section>
