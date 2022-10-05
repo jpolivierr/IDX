@@ -208,8 +208,6 @@ width: 55%;
     position: relative;
 }
 
-
-
 .more-info figure{
     position: relative;
     min-height: 400px;
@@ -244,8 +242,7 @@ width: 55%;
 }
 
 .more-info figure div:nth-child(2){
-
-    top: -20% !important;
+    top: -20%;
 }
 
 .more-info figure div img{
