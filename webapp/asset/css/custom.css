@@ -176,8 +176,6 @@ h2 span::before{
     transform: rotate(45deg);
 }
 
-
-
 .smart-home figure img{
     position: absolute;
     border-radius: var(--border-radius-v2);
@@ -206,6 +204,61 @@ width: 55%;
     margin: auto;
 }
 
+.more-info .container figure:nth-child(1){
+    position: relative;
+}
+
+
+
+.more-info figure{
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.more-info figure::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 450px;
+    height: 450px;
+    border-radius: 100px;
+    background: #a4e3fd52;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    transform: rotate(45deg);
+}
+
+.more-info figure div{
+    position: relative;
+    width: 30%;
+    border-radius: var(--border-radius-v2);
+    box-shadow: var(--shadow-hard);
+    overflow: hidden;
+    z-index: 2;
+    background: white;
+}
+
+.more-info figure div:nth-child(2){
+
+    top: -20% !important;
+}
+
+.more-info figure div img{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.more-info .container section{
+    padding-right: 0;
+    justify-self: center;
+}
 .av-slider-window{
     position: relative;
     width: 100%;

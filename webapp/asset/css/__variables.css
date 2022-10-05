@@ -9,6 +9,7 @@
     --h2-size: 3rem;
     --h3-size: 2rem;
     --h4-size: 1rem;
+    --h5-size: 1.3rem;
     --list-size: 1.1rem;
     --btn-label-size: inherit;
 
@@ -18,6 +19,7 @@
     --h2-weight: 800;
     --h3-weight: 800;
     --h4-weight: 600;
+    --h5-weight: 600;
     --label-weight: 600;
     --btn-label-weight: 800;
   
@@ -26,7 +28,7 @@
     --text-color-dark: #050913;
     --text-color-error: #ff4e4e;
 
-    --light-blue: #a4e3fd96;
+    --light-blue: #a4e3fd52;
     --light-blue-v2: #bed4d9;
     --light-silver: #f1f3f4;
     --error-color: #ff000014;

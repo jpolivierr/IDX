@@ -41,6 +41,12 @@ START: UTIL
    margin-bottom: 1rem;
  }
 
+ h5{
+  font-weight: var(--h5-weight);
+  font-size: var(--h5-size);
+  margin-bottom: .5rem;
+ }
+
  p,legend, label{
    margin-bottom: 1rem;
    line-height: 1.7;
