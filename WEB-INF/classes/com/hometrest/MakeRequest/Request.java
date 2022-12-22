@@ -18,7 +18,7 @@ public class Request {
      private final String REALTOR_API_KEY = dotenv.get("REALTOR_API_KEY");
 
 
-    public void get(HttpServletResponse resp)throws IOException, InterruptedException {
+    public void post(HttpServletResponse resp, String payload)throws IOException, InterruptedException {
         
 
         HttpClient client = HttpClient.newHttpClient();
@@ -27,7 +27,7 @@ public class Request {
                         .header("accept", "application/json")
                         .header("X-RapidAPI-Key", REALTOR_API_KEY )
                         .header("X-RapidAPI-Host", "realty-in-us.p.rapidapi.com")
-                        .method("POST", HttpRequest.BodyPublishers.ofString("{\"limit\":50,\"offset\": 0,\"postal_code\": \"90004\",\"status\": [ \"for_sale\",\"ready_to_build\"],\"sort\": {\"direction\": \"desc\",\"field\": \"list_date\" }}"))
+                        .method("POST", HttpRequest.BodyPublishers.ofString(payload))
                         .build();
 
         var response = client.send(request, HttpResponse.BodyHandlers.ofString());

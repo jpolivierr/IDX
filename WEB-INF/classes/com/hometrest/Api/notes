@@ -1,0 +1,45 @@
+status : Array []
+    for_sale,
+    ready_to_build,
+    for_rent,
+    sold,
+    off_market,
+    other,
+    new_community. 
+
+type : Array []
+    apartment,
+    condo_townhome,
+    condo_townhome_rowhome_coop,
+    condop,
+    condos,
+    coop,
+    duplex_triplex,
+    farm,
+    land,
+    mobile,
+    multi_family,
+    single_family,
+    townhomes
+
+state_code : String
+
+postal_code : String
+
+city : String
+
+list_price : Object {}
+    min: 30000,
+    max: 100000
+
+beds : Object {}
+    min : 2,
+    max : 5
+
+baths : Object {}
+    min : 2,
+    max : 5
+
+sqft : Object {}
+    min: 2,
+    max : 5
