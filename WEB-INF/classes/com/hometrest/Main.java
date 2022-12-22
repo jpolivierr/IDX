@@ -1,18 +1,28 @@
 package com.hometrest;
 
+import java.io.FileReader;
+import java.io.IOException;
+
 import com.google.gson.Gson;
 import com.hometrest.Api.Controller;
 import com.hometrest.Models.ApiResult;
 import com.hometrest.Models.ListingResults;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class Main{
         public static void main(String[] args){
 
                  new Controller();
-                 Gson gson = new Gson();
-                 var json = gson.toJson(new ApiResult());
+                 try {
+                        var fileName = Path.of("/opt/tomcat/web-hometrest/ROOT/WEB-INF/classes/com/hometrest/MakeRequest/demo.json");
+                        var obj = Files.readString(fileName);      
+                        System.out.println(obj);
 
-                 System.out.println(json);
+                } catch (IOException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                }
          
         }
 }

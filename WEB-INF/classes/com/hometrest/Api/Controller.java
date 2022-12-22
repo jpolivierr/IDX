@@ -1,6 +1,10 @@
 package com.hometrest.Api;
+import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
+import com.google.gson.Gson;
 import com.hometrest.MakeRequest.Request;
 import com.hometrest.Models.ListingResults;
 
@@ -21,15 +25,26 @@ public class Controller extends HttpServlet {
         //get data from client
         String payload = req.getParameter("formData");
 
-      //   var out = resp.getWriter();
-      //   out.println(clientResonse);
+        try {
+          Thread.sleep(1000);
 
-          var request = new Request();
-            try {
-              request.post(resp, payload );
-            } catch (InterruptedException e) {
-              // TODO Auto-generated catch block
-              e.printStackTrace();
-             }
+              var fileName = Path.of("/opt/tomcat/web-hometrest/ROOT/WEB-INF/classes/com/hometrest/MakeRequest/demo.json");
+              var demo = Files.readString(fileName); 
+              var out = resp.getWriter();
+
+        out.println(demo);
+        } catch (InterruptedException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+        
+
+    // var request = new Request();
+          //   try {
+          //     request.post(resp, payload );
+          //   } catch (InterruptedException e) {
+          //     // TODO Auto-generated catch block
+          //     e.printStackTrace();
+          //    }
    }
 }
