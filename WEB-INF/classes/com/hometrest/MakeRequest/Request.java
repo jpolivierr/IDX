@@ -18,12 +18,12 @@ public class Request {
      private final String REALTOR_API_KEY = dotenv.get("REALTOR_API_KEY");
 
 
-    public void post(HttpServletResponse resp, String payload)throws IOException, InterruptedException {
+    public void post(HttpServletResponse resp, String url, String payload)throws IOException, InterruptedException {
         
 
         HttpClient client = HttpClient.newHttpClient();
         var request = HttpRequest.newBuilder()
-                        .uri(URI.create("https://realty-in-us.p.rapidapi.com/properties/v3/list"))
+                        .uri(URI.create(url))
                         .header("accept", "application/json")
                         .header("X-RapidAPI-Key", REALTOR_API_KEY )
                         .header("X-RapidAPI-Host", "realty-in-us.p.rapidapi.com")
@@ -33,9 +33,30 @@ public class Request {
         var response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
         new HttpResponseData(resp);
-          HttpResponseData.send(200, "sucess",response.body());
+          HttpResponseData.send(200, "success",response.body());
 
     }
+
+
+
+    public void get(HttpServletResponse resp, String url)throws IOException, InterruptedException {
+        
+
+      HttpClient client = HttpClient.newHttpClient();
+      var request = HttpRequest.newBuilder()
+                      .uri(URI.create(url))
+                      .header("accept", "application/json")
+                      .header("X-RapidAPI-Key", REALTOR_API_KEY )
+                      .header("X-RapidAPI-Host", "realty-in-us.p.rapidapi.com")
+                      .method("GET", HttpRequest.BodyPublishers.noBody())
+                      .build();
+
+      var response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+      new HttpResponseData(resp);
+        HttpResponseData.send(200, "success",response.body());
+
+  }
 
 
    

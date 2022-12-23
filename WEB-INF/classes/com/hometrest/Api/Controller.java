@@ -5,8 +5,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 import com.google.gson.Gson;
+import com.hometrest.EndPoints.ListingResults;
+import com.hometrest.EndPoints.SingleListing;
 import com.hometrest.MakeRequest.Request;
-import com.hometrest.Models.ListingResults;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -15,36 +16,34 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 
+
 @MultipartConfig
 public class Controller extends HttpServlet {
     // set Header
    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-          resp.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+          resp.setHeader("Access-Control-Allow-Origin", "*");
           resp.setContentType("application/json");
 
         //get data from client
         String payload = req.getParameter("formData");
+        String urlPath = req.getRequestURI();
 
-        try {
-          Thread.sleep(1000);
+        // var listings = new ListingResults();
+        //        listings.init(resp,payload);
+              //  resp.getWriter().println(urlPath);
 
-              var fileName = Path.of("/opt/tomcat/web-hometrest/ROOT/WEB-INF/classes/com/hometrest/MakeRequest/demo.json");
-              var demo = Files.readString(fileName); 
-              var out = resp.getWriter();
-
-        out.println(demo);
-        } catch (InterruptedException e) {
-          // TODO Auto-generated catch block
-          e.printStackTrace();
+        switch(urlPath){
+          case "/api/search" :
+               var listings = new ListingResults();
+               listings.init(resp,payload);
+               break;
+          case "/api/property" :
+               var singleListing = new SingleListing();
+               singleListing.init(req, resp,payload);
+          break;
+          default :
+              resp.setStatus(404);
+              resp.getWriter().println("{\"message\": page not found}");
         }
-        
-
-    // var request = new Request();
-          //   try {
-          //     request.post(resp, payload );
-          //   } catch (InterruptedException e) {
-          //     // TODO Auto-generated catch block
-          //     e.printStackTrace();
-          //    }
    }
 }
