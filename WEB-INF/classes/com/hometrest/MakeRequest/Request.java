@@ -33,8 +33,8 @@ public class Request {
 
         var response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        new HttpResponseData(resp);
-          HttpResponseData.send(200, "success",response.body());
+        new HttpResponseData();
+          HttpResponseData.send(resp, 200, "success",response.body());
 
     }
 
@@ -54,9 +54,9 @@ public class Request {
 
       var response = client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
 
-      new HttpResponseData(resp);
+      new HttpResponseData();
         try {
-          HttpResponseData.send(200, "success",response.get().body());
+          HttpResponseData.send(resp, 200, "success",response.get().body());
         } catch (ExecutionException e) {
           // TODO Auto-generated catch block
           e.printStackTrace();

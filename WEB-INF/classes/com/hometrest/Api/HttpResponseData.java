@@ -8,15 +8,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
 
+
 public class HttpResponseData {
 
-    private static HttpServletResponse resp;
-
-    public HttpResponseData(HttpServletResponse resp){
-        HttpResponseData.resp = resp;
-    }
-
-    public static void send(int status, String message, String data){
+    public static void send(HttpServletResponse resp, int status, String message, String data){
         
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         var jsonData = gson.toJson(data);

@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 
 @MultipartConfig
-public class Controller extends HttpServlet {
+public class ListingResultsServlet extends HttpServlet {
     // set Header
    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
           resp.setHeader("Access-Control-Allow-Origin", "*");

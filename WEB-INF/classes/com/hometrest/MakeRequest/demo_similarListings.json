@@ -1,0 +1,207 @@
+{
+    "data": {
+      "home": {
+        "__typename": "Home",
+        "related_homes": {
+          "__typename": "SearchHomeResult",
+          "results": [
+            {
+              "__typename": "SearchHome",
+              "property_id": "5275601705",
+              "listing_id": "2948922182",
+              "plan_id": null,
+              "status": "for_sale",
+              "list_price": 299000,
+              "last_sold_price": null,
+              "last_sold_date": null,
+              "primary_photo": {
+                "__typename": "Photo",
+                "href": "https://ap.rdcpix.com/705891ec07552510c1a0f57926cae88al-m2557308760xd-w300_h300_q80.jpg"
+              },
+              "location": {
+                "__typename": "SearchHomeLocation",
+                "address": {
+                  "__typename": "SearchHomeAddress",
+                  "unit": null,
+                  "line": "2768 Nw 131st St",
+                  "street_number": null,
+                  "street_name": "",
+                  "city": "Opa Locka",
+                  "state": "Florida",
+                  "state_code": "FL",
+                  "postal_code": "33054",
+                  "street_suffix": null,
+                  "country": null,
+                  "coordinate": {
+                    "__typename": "Coordinate",
+                    "lat": 25.893141,
+                    "lon": -80.245315
+                  }
+                },
+                "street_view_url": ""
+              },
+              "description": {
+                "__typename": "SearchHomeDescription",
+                "beds": 3,
+                "baths_full_calc": 2,
+                "baths_partial_calc": 1,
+                "baths": 3,
+                "sqft": 1263,
+                "beds_min": null,
+                "beds_max": null,
+                "baths_min": null,
+                "baths_max": null,
+                "baths_full": 2,
+                "baths_half": 1,
+                "sqft_min": null,
+                "sqft_max": null,
+                "lot_sqft": null,
+                "type": null,
+                "sub_type": null,
+                "year_built": null,
+                "sold_price": null,
+                "text": null
+              },
+              "comparable_data": {
+                "__typename": "HomeComparableData",
+                "price": {
+                  "__typename": "ComparableDataValue",
+                  "percent": -40,
+                  "absolute": -196000
+                },
+                "comparable_sqft": {
+                  "__typename": "ComparableDataValue",
+                  "percent": -26,
+                  "absolute": -434
+                },
+                "comparable_lot_sqft": {
+                  "__typename": "ComparableDataValue",
+                  "percent": null,
+                  "absolute": null
+                },
+                "year_built": {
+                  "__typename": "ComparableDataAbsoluteValue",
+                  "absolute": null
+                }
+              },
+              "list_price_min": null,
+              "list_price_max": null,
+              "href": "https://www.realtor.com/realestateandhomes-detail/2768-NW-131st-St_Opa-Locka_FL_33054_M52756-01705",
+              "permalink": "2768-NW-131st-St_Opa-Locka_FL_33054_M52756-01705",
+              "list_date": null,
+              "last_update_date": "2022-10-14T20:27:10Z",
+              "flags": {
+                "__typename": "HomeFlags",
+                "is_contingent": null,
+                "is_pending": null,
+                "is_price_reduced": null,
+                "is_new_listing": null,
+                "is_foreclosure": null
+              },
+              "photos": null,
+              "estimate": {
+                "__typename": "LatestEstimate",
+                "estimate": 288800
+              }
+            },
+            {
+              "__typename": "SearchHome",
+              "property_id": "9183192250",
+              "listing_id": "2941790914",
+              "plan_id": null,
+              "status": "for_sale",
+              "list_price": 310000,
+              "last_sold_price": null,
+              "last_sold_date": null,
+              "primary_photo": {
+                "__typename": "Photo",
+                "href": "https://ap.rdcpix.com/ff8ffba2fc12047d4809632e728e51bal-m2863303615xd-w300_h300_q80.jpg"
+              },
+              "location": {
+                "__typename": "SearchHomeLocation",
+                "address": {
+                  "__typename": "SearchHomeAddress",
+                  "unit": null,
+                  "line": "2277 Nw 136th Ter 1",
+                  "street_number": null,
+                  "street_name": "",
+                  "city": "Opa Locka",
+                  "state": "Florida",
+                  "state_code": "FL",
+                  "postal_code": "33054",
+                  "street_suffix": null,
+                  "country": null,
+                  "coordinate": {
+                    "__typename": "Coordinate",
+                    "lat": 25.899566,
+                    "lon": -80.23747
+                  }
+                },
+                "street_view_url": ""
+              },
+              "description": {
+                "__typename": "SearchHomeDescription",
+                "beds": 3,
+                "baths_full_calc": 2,
+                "baths_partial_calc": null,
+                "baths": 2,
+                "sqft": 1253,
+                "beds_min": null,
+                "beds_max": null,
+                "baths_min": null,
+                "baths_max": null,
+                "baths_full": 2,
+                "baths_half": null,
+                "sqft_min": null,
+                "sqft_max": null,
+                "lot_sqft": null,
+                "type": null,
+                "sub_type": null,
+                "year_built": null,
+                "sold_price": null,
+                "text": null
+              },
+              "comparable_data": {
+                "__typename": "HomeComparableData",
+                "price": {
+                  "__typename": "ComparableDataValue",
+                  "percent": -37,
+                  "absolute": -185000
+                },
+                "comparable_sqft": {
+                  "__typename": "ComparableDataValue",
+                  "percent": -26,
+                  "absolute": -444
+                },
+                "comparable_lot_sqft": {
+                  "__typename": "ComparableDataValue",
+                  "percent": null,
+                  "absolute": null
+                },
+                "year_built": {
+                  "__typename": "ComparableDataAbsoluteValue",
+                  "absolute": null
+                }
+              },
+              "list_price_min": null,
+              "list_price_max": null,
+              "href": "https://www.realtor.com/realestateandhomes-detail/2277-NW-136th-Ter-1_Opa-Locka_FL_33054_M91831-92250",
+              "permalink": "2277-NW-136th-Ter-1_Opa-Locka_FL_33054_M91831-92250",
+              "list_date": null,
+              "last_update_date": "2022-10-19T04:17:20Z",
+              "flags": {
+                "__typename": "HomeFlags",
+                "is_contingent": null,
+                "is_pending": null,
+                "is_price_reduced": null,
+                "is_new_listing": null,
+                "is_foreclosure": null
+              },
+              "photos": null,
+              "estimate": null
+            }
+          ]
+        }
+      }
+    }
+  }
