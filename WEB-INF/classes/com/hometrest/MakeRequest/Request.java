@@ -5,6 +5,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.concurrent.ExecutionException;
 
 import com.hometrest.Api.HttpResponseData;
 
@@ -51,10 +52,15 @@ public class Request {
                       .method("GET", HttpRequest.BodyPublishers.noBody())
                       .build();
 
-      var response = client.send(request, HttpResponse.BodyHandlers.ofString());
+      var response = client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
 
       new HttpResponseData(resp);
-        HttpResponseData.send(200, "success",response.body());
+        try {
+          HttpResponseData.send(200, "success",response.get().body());
+        } catch (ExecutionException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
 
   }
 

@@ -19,7 +19,7 @@ public class SingleListing {
      //get the type of request
       String query = req.getQueryString();
          String url = "https://realty-in-us.p.rapidapi.com/properties/v3/detail?property_"+query;
-         
+
         // try {
     
         //         Thread.sleep(1000);
@@ -40,6 +40,6 @@ public class SingleListing {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
                }
-     }
+      }
     
 }

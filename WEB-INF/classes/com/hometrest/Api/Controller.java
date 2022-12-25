@@ -6,6 +6,7 @@ import java.nio.file.Path;
 
 import com.google.gson.Gson;
 import com.hometrest.EndPoints.ListingResults;
+import com.hometrest.EndPoints.SimilarLisings;
 import com.hometrest.EndPoints.SingleListing;
 import com.hometrest.MakeRequest.Request;
 
@@ -41,6 +42,9 @@ public class Controller extends HttpServlet {
                var singleListing = new SingleListing();
                singleListing.init(req, resp,payload);
           break;
+          case "/api/similar-listings" :
+               var similarListings = new SimilarLisings();
+               similarListings.init(req, resp, payload);
           default :
               resp.setStatus(404);
               resp.getWriter().println("{\"message\": page not found}");
