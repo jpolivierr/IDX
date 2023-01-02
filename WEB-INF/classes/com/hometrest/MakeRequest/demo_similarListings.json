@@ -1,207 +1,1002 @@
 {
-    "data": {
-      "home": {
-        "__typename": "Home",
-        "related_homes": {
-          "__typename": "SearchHomeResult",
-          "results": [
-            {
-              "__typename": "SearchHome",
-              "property_id": "5275601705",
-              "listing_id": "2948922182",
-              "plan_id": null,
-              "status": "for_sale",
-              "list_price": 299000,
-              "last_sold_price": null,
-              "last_sold_date": null,
-              "primary_photo": {
-                "__typename": "Photo",
-                "href": "https://ap.rdcpix.com/705891ec07552510c1a0f57926cae88al-m2557308760xd-w300_h300_q80.jpg"
-              },
-              "location": {
-                "__typename": "SearchHomeLocation",
-                "address": {
-                  "__typename": "SearchHomeAddress",
-                  "unit": null,
-                  "line": "2768 Nw 131st St",
-                  "street_number": null,
-                  "street_name": "",
-                  "city": "Opa Locka",
-                  "state": "Florida",
-                  "state_code": "FL",
-                  "postal_code": "33054",
-                  "street_suffix": null,
-                  "country": null,
-                  "coordinate": {
-                    "__typename": "Coordinate",
-                    "lat": 25.893141,
-                    "lon": -80.245315
-                  }
-                },
-                "street_view_url": ""
-              },
-              "description": {
-                "__typename": "SearchHomeDescription",
-                "beds": 3,
-                "baths_full_calc": 2,
-                "baths_partial_calc": 1,
-                "baths": 3,
-                "sqft": 1263,
-                "beds_min": null,
-                "beds_max": null,
-                "baths_min": null,
-                "baths_max": null,
-                "baths_full": 2,
-                "baths_half": 1,
-                "sqft_min": null,
-                "sqft_max": null,
-                "lot_sqft": null,
-                "type": null,
-                "sub_type": null,
-                "year_built": null,
-                "sold_price": null,
-                "text": null
-              },
-              "comparable_data": {
-                "__typename": "HomeComparableData",
-                "price": {
-                  "__typename": "ComparableDataValue",
-                  "percent": -40,
-                  "absolute": -196000
-                },
-                "comparable_sqft": {
-                  "__typename": "ComparableDataValue",
-                  "percent": -26,
-                  "absolute": -434
-                },
-                "comparable_lot_sqft": {
-                  "__typename": "ComparableDataValue",
-                  "percent": null,
-                  "absolute": null
-                },
-                "year_built": {
-                  "__typename": "ComparableDataAbsoluteValue",
-                  "absolute": null
+  "data": {
+    "home": {
+      "__typename": "Home",
+      "related_homes": {
+        "__typename": "SearchHomeResult",
+        "results": [
+          {
+            "__typename": "SearchHome",
+            "property_id": "6045300583",
+            "listing_id": "2948195896",
+            "plan_id": null,
+            "status": "for_sale",
+            "list_price": 392500,
+            "last_sold_price": null,
+            "last_sold_date": null,
+            "primary_photo": {
+              "__typename": "Photo",
+              "href": "https://ap.rdcpix.com/5c3d706af2b33b1928532ccafa3a8b43l-m353143771xd-w300_h300_q80.jpg"
+            },
+            "location": {
+              "__typename": "SearchHomeLocation",
+              "address": {
+                "__typename": "SearchHomeAddress",
+                "unit": null,
+                "line": "1175 Nw 133rd St",
+                "street_number": null,
+                "street_name": "",
+                "city": "North Miami",
+                "state": "Florida",
+                "state_code": "FL",
+                "postal_code": "33168",
+                "street_suffix": null,
+                "country": null,
+                "coordinate": {
+                  "__typename": "Coordinate",
+                  "lat": 25.896406,
+                  "lon": -80.218722
                 }
               },
-              "list_price_min": null,
-              "list_price_max": null,
-              "href": "https://www.realtor.com/realestateandhomes-detail/2768-NW-131st-St_Opa-Locka_FL_33054_M52756-01705",
-              "permalink": "2768-NW-131st-St_Opa-Locka_FL_33054_M52756-01705",
-              "list_date": null,
-              "last_update_date": "2022-10-14T20:27:10Z",
-              "flags": {
-                "__typename": "HomeFlags",
-                "is_contingent": null,
-                "is_pending": null,
-                "is_price_reduced": null,
-                "is_new_listing": null,
-                "is_foreclosure": null
+              "street_view_url": ""
+            },
+            "description": {
+              "__typename": "SearchHomeDescription",
+              "beds": 2,
+              "baths_full_calc": 1,
+              "baths_partial_calc": null,
+              "baths": 1,
+              "sqft": 832,
+              "beds_min": null,
+              "beds_max": null,
+              "baths_min": null,
+              "baths_max": null,
+              "baths_full": 1,
+              "baths_half": null,
+              "sqft_min": null,
+              "sqft_max": null,
+              "lot_sqft": null,
+              "type": null,
+              "sub_type": null,
+              "year_built": null,
+              "sold_price": null,
+              "text": null
+            },
+            "comparable_data": {
+              "__typename": "HomeComparableData",
+              "price": {
+                "__typename": "ComparableDataValue",
+                "percent": -12,
+                "absolute": -54500
               },
-              "photos": null,
-              "estimate": {
-                "__typename": "LatestEstimate",
-                "estimate": 288800
+              "comparable_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": -23,
+                "absolute": -243
+              },
+              "comparable_lot_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": null,
+                "absolute": null
+              },
+              "year_built": {
+                "__typename": "ComparableDataAbsoluteValue",
+                "absolute": null
               }
             },
-            {
-              "__typename": "SearchHome",
-              "property_id": "9183192250",
-              "listing_id": "2941790914",
-              "plan_id": null,
-              "status": "for_sale",
-              "list_price": 310000,
-              "last_sold_price": null,
-              "last_sold_date": null,
-              "primary_photo": {
-                "__typename": "Photo",
-                "href": "https://ap.rdcpix.com/ff8ffba2fc12047d4809632e728e51bal-m2863303615xd-w300_h300_q80.jpg"
-              },
-              "location": {
-                "__typename": "SearchHomeLocation",
-                "address": {
-                  "__typename": "SearchHomeAddress",
-                  "unit": null,
-                  "line": "2277 Nw 136th Ter 1",
-                  "street_number": null,
-                  "street_name": "",
-                  "city": "Opa Locka",
-                  "state": "Florida",
-                  "state_code": "FL",
-                  "postal_code": "33054",
-                  "street_suffix": null,
-                  "country": null,
-                  "coordinate": {
-                    "__typename": "Coordinate",
-                    "lat": 25.899566,
-                    "lon": -80.23747
-                  }
-                },
-                "street_view_url": ""
-              },
-              "description": {
-                "__typename": "SearchHomeDescription",
-                "beds": 3,
-                "baths_full_calc": 2,
-                "baths_partial_calc": null,
-                "baths": 2,
-                "sqft": 1253,
-                "beds_min": null,
-                "beds_max": null,
-                "baths_min": null,
-                "baths_max": null,
-                "baths_full": 2,
-                "baths_half": null,
-                "sqft_min": null,
-                "sqft_max": null,
-                "lot_sqft": null,
-                "type": null,
-                "sub_type": null,
-                "year_built": null,
-                "sold_price": null,
-                "text": null
-              },
-              "comparable_data": {
-                "__typename": "HomeComparableData",
-                "price": {
-                  "__typename": "ComparableDataValue",
-                  "percent": -37,
-                  "absolute": -185000
-                },
-                "comparable_sqft": {
-                  "__typename": "ComparableDataValue",
-                  "percent": -26,
-                  "absolute": -444
-                },
-                "comparable_lot_sqft": {
-                  "__typename": "ComparableDataValue",
-                  "percent": null,
-                  "absolute": null
-                },
-                "year_built": {
-                  "__typename": "ComparableDataAbsoluteValue",
-                  "absolute": null
+            "list_price_min": null,
+            "list_price_max": null,
+            "href": "https://www.realtor.com/realestateandhomes-detail/1175-NW-133rd-St_North-Miami_FL_33168_M60453-00583",
+            "permalink": "1175-NW-133rd-St_North-Miami_FL_33168_M60453-00583",
+            "list_date": null,
+            "last_update_date": "2022-12-06T20:33:23Z",
+            "flags": {
+              "__typename": "HomeFlags",
+              "is_contingent": null,
+              "is_pending": null,
+              "is_price_reduced": null,
+              "is_new_listing": null,
+              "is_foreclosure": null
+            },
+            "photos": null,
+            "estimate": {
+              "__typename": "LatestEstimate",
+              "estimate": 375600
+            }
+          },
+          {
+            "__typename": "SearchHome",
+            "property_id": "6068181872",
+            "listing_id": "2946530024",
+            "plan_id": null,
+            "status": "for_sale",
+            "list_price": 430000,
+            "last_sold_price": null,
+            "last_sold_date": null,
+            "primary_photo": {
+              "__typename": "Photo",
+              "href": "https://ap.rdcpix.com/cb66b12df1bfb21c46af8345c2306920l-m2334391053xd-w300_h300_q80.jpg"
+            },
+            "location": {
+              "__typename": "SearchHomeLocation",
+              "address": {
+                "__typename": "SearchHomeAddress",
+                "unit": null,
+                "line": "1115 Nw 128th Ter",
+                "street_number": null,
+                "street_name": "",
+                "city": "North Miami",
+                "state": "Florida",
+                "state_code": "FL",
+                "postal_code": "33168",
+                "street_suffix": null,
+                "country": null,
+                "coordinate": {
+                  "__typename": "Coordinate",
+                  "lat": 25.892421,
+                  "lon": -80.217478
                 }
               },
-              "list_price_min": null,
-              "list_price_max": null,
-              "href": "https://www.realtor.com/realestateandhomes-detail/2277-NW-136th-Ter-1_Opa-Locka_FL_33054_M91831-92250",
-              "permalink": "2277-NW-136th-Ter-1_Opa-Locka_FL_33054_M91831-92250",
-              "list_date": null,
-              "last_update_date": "2022-10-19T04:17:20Z",
-              "flags": {
-                "__typename": "HomeFlags",
-                "is_contingent": null,
-                "is_pending": null,
-                "is_price_reduced": null,
-                "is_new_listing": null,
-                "is_foreclosure": null
+              "street_view_url": ""
+            },
+            "description": {
+              "__typename": "SearchHomeDescription",
+              "beds": 3,
+              "baths_full_calc": 2,
+              "baths_partial_calc": null,
+              "baths": 2,
+              "sqft": 1460,
+              "beds_min": null,
+              "beds_max": null,
+              "baths_min": null,
+              "baths_max": null,
+              "baths_full": 2,
+              "baths_half": null,
+              "sqft_min": null,
+              "sqft_max": null,
+              "lot_sqft": null,
+              "type": null,
+              "sub_type": null,
+              "year_built": null,
+              "sold_price": null,
+              "text": null
+            },
+            "comparable_data": {
+              "__typename": "HomeComparableData",
+              "price": {
+                "__typename": "ComparableDataValue",
+                "percent": -4,
+                "absolute": -17000
               },
-              "photos": null,
-              "estimate": null
+              "comparable_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": 36,
+                "absolute": 385
+              },
+              "comparable_lot_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": null,
+                "absolute": null
+              },
+              "year_built": {
+                "__typename": "ComparableDataAbsoluteValue",
+                "absolute": null
+              }
+            },
+            "list_price_min": null,
+            "list_price_max": null,
+            "href": "https://www.realtor.com/realestateandhomes-detail/1115-NW-128th-Ter_North-Miami_FL_33168_M60681-81872",
+            "permalink": "1115-NW-128th-Ter_North-Miami_FL_33168_M60681-81872",
+            "list_date": null,
+            "last_update_date": "2022-08-08T21:02:07Z",
+            "flags": {
+              "__typename": "HomeFlags",
+              "is_contingent": null,
+              "is_pending": null,
+              "is_price_reduced": null,
+              "is_new_listing": null,
+              "is_foreclosure": null
+            },
+            "photos": null,
+            "estimate": {
+              "__typename": "LatestEstimate",
+              "estimate": 413400
             }
-          ]
-        }
+          },
+          {
+            "__typename": "SearchHome",
+            "property_id": "5817742877",
+            "listing_id": "2943907761",
+            "plan_id": null,
+            "status": "for_sale",
+            "list_price": 449900,
+            "last_sold_price": null,
+            "last_sold_date": null,
+            "primary_photo": {
+              "__typename": "Photo",
+              "href": "https://ap.rdcpix.com/290e69bc30e13d06ecb13a3a1806f904l-m1958245045xd-w300_h300_q80.jpg"
+            },
+            "location": {
+              "__typename": "SearchHomeLocation",
+              "address": {
+                "__typename": "SearchHomeAddress",
+                "unit": null,
+                "line": "765 Nw 121st St",
+                "street_number": null,
+                "street_name": "",
+                "city": "North Miami",
+                "state": "Florida",
+                "state_code": "FL",
+                "postal_code": "33168",
+                "street_suffix": null,
+                "country": null,
+                "coordinate": {
+                  "__typename": "Coordinate",
+                  "lat": 25.885773,
+                  "lon": -80.212024
+                }
+              },
+              "street_view_url": ""
+            },
+            "description": {
+              "__typename": "SearchHomeDescription",
+              "beds": 4,
+              "baths_full_calc": 3,
+              "baths_partial_calc": null,
+              "baths": 3,
+              "sqft": 1110,
+              "beds_min": null,
+              "beds_max": null,
+              "baths_min": null,
+              "baths_max": null,
+              "baths_full": 3,
+              "baths_half": null,
+              "sqft_min": null,
+              "sqft_max": null,
+              "lot_sqft": null,
+              "type": null,
+              "sub_type": null,
+              "year_built": null,
+              "sold_price": null,
+              "text": null
+            },
+            "comparable_data": {
+              "__typename": "HomeComparableData",
+              "price": {
+                "__typename": "ComparableDataValue",
+                "percent": 1,
+                "absolute": 2900
+              },
+              "comparable_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": 3,
+                "absolute": 35
+              },
+              "comparable_lot_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": null,
+                "absolute": null
+              },
+              "year_built": {
+                "__typename": "ComparableDataAbsoluteValue",
+                "absolute": null
+              }
+            },
+            "list_price_min": null,
+            "list_price_max": null,
+            "href": "https://www.realtor.com/realestateandhomes-detail/765-NW-121st-St_North-Miami_FL_33168_M58177-42877",
+            "permalink": "765-NW-121st-St_North-Miami_FL_33168_M58177-42877",
+            "list_date": null,
+            "last_update_date": "2022-11-07T15:09:12Z",
+            "flags": {
+              "__typename": "HomeFlags",
+              "is_contingent": null,
+              "is_pending": null,
+              "is_price_reduced": false,
+              "is_new_listing": null,
+              "is_foreclosure": null
+            },
+            "photos": null,
+            "estimate": {
+              "__typename": "LatestEstimate",
+              "estimate": 474200
+            }
+          },
+          {
+            "__typename": "SearchHome",
+            "property_id": "5961179490",
+            "listing_id": "2947945865",
+            "plan_id": null,
+            "status": "for_sale",
+            "list_price": 436900,
+            "last_sold_price": null,
+            "last_sold_date": null,
+            "primary_photo": {
+              "__typename": "Photo",
+              "href": "https://ap.rdcpix.com/b725e6aebd9137fcfb13bdb25feda515l-m1071921823xd-w300_h300_q80.jpg"
+            },
+            "location": {
+              "__typename": "SearchHomeLocation",
+              "address": {
+                "__typename": "SearchHomeAddress",
+                "unit": null,
+                "line": "760 Nw 132nd St",
+                "street_number": null,
+                "street_name": "",
+                "city": "North Miami",
+                "state": "Florida",
+                "state_code": "FL",
+                "postal_code": "33168",
+                "street_suffix": null,
+                "country": null,
+                "coordinate": {
+                  "__typename": "Coordinate",
+                  "lat": 25.895249,
+                  "lon": -80.21257
+                }
+              },
+              "street_view_url": ""
+            },
+            "description": {
+              "__typename": "SearchHomeDescription",
+              "beds": 3,
+              "baths_full_calc": 2,
+              "baths_partial_calc": null,
+              "baths": 2,
+              "sqft": 1568,
+              "beds_min": null,
+              "beds_max": null,
+              "baths_min": null,
+              "baths_max": null,
+              "baths_full": 2,
+              "baths_half": null,
+              "sqft_min": null,
+              "sqft_max": null,
+              "lot_sqft": null,
+              "type": null,
+              "sub_type": null,
+              "year_built": null,
+              "sold_price": null,
+              "text": null
+            },
+            "comparable_data": {
+              "__typename": "HomeComparableData",
+              "price": {
+                "__typename": "ComparableDataValue",
+                "percent": -2,
+                "absolute": -10100
+              },
+              "comparable_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": 46,
+                "absolute": 493
+              },
+              "comparable_lot_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": null,
+                "absolute": null
+              },
+              "year_built": {
+                "__typename": "ComparableDataAbsoluteValue",
+                "absolute": null
+              }
+            },
+            "list_price_min": null,
+            "list_price_max": null,
+            "href": "https://www.realtor.com/realestateandhomes-detail/760-NW-132nd-St_North-Miami_FL_33168_M59611-79490",
+            "permalink": "760-NW-132nd-St_North-Miami_FL_33168_M59611-79490",
+            "list_date": null,
+            "last_update_date": "2022-09-20T22:58:28Z",
+            "flags": {
+              "__typename": "HomeFlags",
+              "is_contingent": null,
+              "is_pending": null,
+              "is_price_reduced": null,
+              "is_new_listing": null,
+              "is_foreclosure": null
+            },
+            "photos": null,
+            "estimate": {
+              "__typename": "LatestEstimate",
+              "estimate": 424200
+            }
+          },
+          {
+            "__typename": "SearchHome",
+            "property_id": "5620248392",
+            "listing_id": "2944594767",
+            "plan_id": null,
+            "status": "for_sale",
+            "list_price": 450000,
+            "last_sold_price": null,
+            "last_sold_date": null,
+            "primary_photo": {
+              "__typename": "Photo",
+              "href": "https://ap.rdcpix.com/24f2e5662a0f5b4c77b881c3a7086919l-m4258806928xd-w300_h300_q80.jpg"
+            },
+            "location": {
+              "__typename": "SearchHomeLocation",
+              "address": {
+                "__typename": "SearchHomeAddress",
+                "unit": null,
+                "line": "450 Nw 117th St",
+                "street_number": null,
+                "street_name": "",
+                "city": "Miami",
+                "state": "Florida",
+                "state_code": "FL",
+                "postal_code": "33168",
+                "street_suffix": null,
+                "country": null,
+                "coordinate": {
+                  "__typename": "Coordinate",
+                  "lat": 25.881845,
+                  "lon": -80.206242
+                }
+              },
+              "street_view_url": ""
+            },
+            "description": {
+              "__typename": "SearchHomeDescription",
+              "beds": 3,
+              "baths_full_calc": 2,
+              "baths_partial_calc": null,
+              "baths": 2,
+              "sqft": 841,
+              "beds_min": null,
+              "beds_max": null,
+              "baths_min": null,
+              "baths_max": null,
+              "baths_full": 2,
+              "baths_half": null,
+              "sqft_min": null,
+              "sqft_max": null,
+              "lot_sqft": null,
+              "type": null,
+              "sub_type": null,
+              "year_built": null,
+              "sold_price": null,
+              "text": null
+            },
+            "comparable_data": {
+              "__typename": "HomeComparableData",
+              "price": {
+                "__typename": "ComparableDataValue",
+                "percent": 1,
+                "absolute": 3000
+              },
+              "comparable_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": -22,
+                "absolute": -234
+              },
+              "comparable_lot_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": null,
+                "absolute": null
+              },
+              "year_built": {
+                "__typename": "ComparableDataAbsoluteValue",
+                "absolute": null
+              }
+            },
+            "list_price_min": null,
+            "list_price_max": null,
+            "href": "https://www.realtor.com/realestateandhomes-detail/450-NW-117th-St_Miami_FL_33168_M56202-48392",
+            "permalink": "450-NW-117th-St_Miami_FL_33168_M56202-48392",
+            "list_date": null,
+            "last_update_date": "2022-10-28T19:56:35Z",
+            "flags": {
+              "__typename": "HomeFlags",
+              "is_contingent": null,
+              "is_pending": null,
+              "is_price_reduced": null,
+              "is_new_listing": null,
+              "is_foreclosure": null
+            },
+            "photos": null,
+            "estimate": {
+              "__typename": "LatestEstimate",
+              "estimate": 453100
+            }
+          },
+          {
+            "__typename": "SearchHome",
+            "property_id": "5389993016",
+            "listing_id": "2940741841",
+            "plan_id": null,
+            "status": "for_sale",
+            "list_price": 459000,
+            "last_sold_price": null,
+            "last_sold_date": null,
+            "primary_photo": {
+              "__typename": "Photo",
+              "href": "https://ap.rdcpix.com/f0d1a6bca636395540d881308acc9515l-m3501984052xd-w300_h300_q80.jpg"
+            },
+            "location": {
+              "__typename": "SearchHomeLocation",
+              "address": {
+                "__typename": "SearchHomeAddress",
+                "unit": null,
+                "line": "2941 Nw 132nd Ter",
+                "street_number": null,
+                "street_name": "",
+                "city": "Opa Locka",
+                "state": "Florida",
+                "state_code": "FL",
+                "postal_code": "33054",
+                "street_suffix": null,
+                "country": null,
+                "coordinate": {
+                  "__typename": "Coordinate",
+                  "lat": 25.895029,
+                  "lon": -80.248815
+                }
+              },
+              "street_view_url": ""
+            },
+            "description": {
+              "__typename": "SearchHomeDescription",
+              "beds": 2,
+              "baths_full_calc": 1,
+              "baths_partial_calc": null,
+              "baths": 1,
+              "sqft": 1032,
+              "beds_min": null,
+              "beds_max": null,
+              "baths_min": null,
+              "baths_max": null,
+              "baths_full": 1,
+              "baths_half": null,
+              "sqft_min": null,
+              "sqft_max": null,
+              "lot_sqft": null,
+              "type": null,
+              "sub_type": null,
+              "year_built": null,
+              "sold_price": null,
+              "text": null
+            },
+            "comparable_data": {
+              "__typename": "HomeComparableData",
+              "price": {
+                "__typename": "ComparableDataValue",
+                "percent": 3,
+                "absolute": 12000
+              },
+              "comparable_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": -4,
+                "absolute": -43
+              },
+              "comparable_lot_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": null,
+                "absolute": null
+              },
+              "year_built": {
+                "__typename": "ComparableDataAbsoluteValue",
+                "absolute": null
+              }
+            },
+            "list_price_min": null,
+            "list_price_max": null,
+            "href": "https://www.realtor.com/realestateandhomes-detail/2941-NW-132nd-Ter_Opa-Locka_FL_33054_M53899-93016",
+            "permalink": "2941-NW-132nd-Ter_Opa-Locka_FL_33054_M53899-93016",
+            "list_date": null,
+            "last_update_date": "2022-09-02T19:49:23Z",
+            "flags": {
+              "__typename": "HomeFlags",
+              "is_contingent": null,
+              "is_pending": null,
+              "is_price_reduced": false,
+              "is_new_listing": null,
+              "is_foreclosure": null
+            },
+            "photos": null,
+            "estimate": {
+              "__typename": "LatestEstimate",
+              "estimate": 459200
+            }
+          },
+          {
+            "__typename": "SearchHome",
+            "property_id": "5993612721",
+            "listing_id": "2950560920",
+            "plan_id": null,
+            "status": "for_sale",
+            "list_price": 479000,
+            "last_sold_price": null,
+            "last_sold_date": null,
+            "primary_photo": {
+              "__typename": "Photo",
+              "href": "https://ap.rdcpix.com/7c2671fef5b4e40cc8f18b45a3fb14eal-m1299647546xd-w300_h300_q80.jpg"
+            },
+            "location": {
+              "__typename": "SearchHomeLocation",
+              "address": {
+                "__typename": "SearchHomeAddress",
+                "unit": null,
+                "line": "1015 Nw 130th St",
+                "street_number": null,
+                "street_name": "",
+                "city": "North Miami",
+                "state": "Florida",
+                "state_code": "FL",
+                "postal_code": "33168",
+                "street_suffix": null,
+                "country": null,
+                "coordinate": {
+                  "__typename": "Coordinate",
+                  "lat": 25.893929,
+                  "lon": -80.215523
+                }
+              },
+              "street_view_url": ""
+            },
+            "description": {
+              "__typename": "SearchHomeDescription",
+              "beds": 3,
+              "baths_full_calc": 2,
+              "baths_partial_calc": null,
+              "baths": 2,
+              "sqft": 1337,
+              "beds_min": null,
+              "beds_max": null,
+              "baths_min": null,
+              "baths_max": null,
+              "baths_full": 2,
+              "baths_half": null,
+              "sqft_min": null,
+              "sqft_max": null,
+              "lot_sqft": null,
+              "type": null,
+              "sub_type": null,
+              "year_built": null,
+              "sold_price": null,
+              "text": null
+            },
+            "comparable_data": {
+              "__typename": "HomeComparableData",
+              "price": {
+                "__typename": "ComparableDataValue",
+                "percent": 7,
+                "absolute": 32000
+              },
+              "comparable_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": 24,
+                "absolute": 262
+              },
+              "comparable_lot_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": null,
+                "absolute": null
+              },
+              "year_built": {
+                "__typename": "ComparableDataAbsoluteValue",
+                "absolute": null
+              }
+            },
+            "list_price_min": null,
+            "list_price_max": null,
+            "href": "https://www.realtor.com/realestateandhomes-detail/1015-NW-130th-St_North-Miami_FL_33168_M59936-12721",
+            "permalink": "1015-NW-130th-St_North-Miami_FL_33168_M59936-12721",
+            "list_date": null,
+            "last_update_date": "2022-12-14T15:40:00Z",
+            "flags": {
+              "__typename": "HomeFlags",
+              "is_contingent": null,
+              "is_pending": null,
+              "is_price_reduced": null,
+              "is_new_listing": null,
+              "is_foreclosure": null
+            },
+            "photos": null,
+            "estimate": {
+              "__typename": "LatestEstimate",
+              "estimate": 343700
+            }
+          },
+          {
+            "__typename": "SearchHome",
+            "property_id": "5998345496",
+            "listing_id": "2940745658",
+            "plan_id": null,
+            "status": "for_sale",
+            "list_price": 450000,
+            "last_sold_price": null,
+            "last_sold_date": null,
+            "primary_photo": {
+              "__typename": "Photo",
+              "href": "https://ap.rdcpix.com/b54000da45a4132f4e7a372acaeb778fl-m1425267001xd-w300_h300_q80.jpg"
+            },
+            "location": {
+              "__typename": "SearchHomeLocation",
+              "address": {
+                "__typename": "SearchHomeAddress",
+                "unit": null,
+                "line": "1245 Nw 129th St",
+                "street_number": null,
+                "street_name": "",
+                "city": "North Miami",
+                "state": "Florida",
+                "state_code": "FL",
+                "postal_code": "33167",
+                "street_suffix": null,
+                "country": null,
+                "coordinate": {
+                  "__typename": "Coordinate",
+                  "lat": 25.892732,
+                  "lon": -80.220006
+                }
+              },
+              "street_view_url": ""
+            },
+            "description": {
+              "__typename": "SearchHomeDescription",
+              "beds": 3,
+              "baths_full_calc": 2,
+              "baths_partial_calc": null,
+              "baths": 2,
+              "sqft": 1266,
+              "beds_min": null,
+              "beds_max": null,
+              "baths_min": null,
+              "baths_max": null,
+              "baths_full": 2,
+              "baths_half": null,
+              "sqft_min": null,
+              "sqft_max": null,
+              "lot_sqft": null,
+              "type": null,
+              "sub_type": null,
+              "year_built": null,
+              "sold_price": null,
+              "text": null
+            },
+            "comparable_data": {
+              "__typename": "HomeComparableData",
+              "price": {
+                "__typename": "ComparableDataValue",
+                "percent": 1,
+                "absolute": 3000
+              },
+              "comparable_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": 18,
+                "absolute": 191
+              },
+              "comparable_lot_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": null,
+                "absolute": null
+              },
+              "year_built": {
+                "__typename": "ComparableDataAbsoluteValue",
+                "absolute": null
+              }
+            },
+            "list_price_min": null,
+            "list_price_max": null,
+            "href": "https://www.realtor.com/realestateandhomes-detail/North-Miami_FL_33167_M59983-45496",
+            "permalink": "North-Miami_FL_33167_M59983-45496",
+            "list_date": null,
+            "last_update_date": "2022-04-18T15:32:50Z",
+            "flags": {
+              "__typename": "HomeFlags",
+              "is_contingent": null,
+              "is_pending": null,
+              "is_price_reduced": null,
+              "is_new_listing": null,
+              "is_foreclosure": null
+            },
+            "photos": null,
+            "estimate": {
+              "__typename": "LatestEstimate",
+              "estimate": 432500
+            }
+          },
+          {
+            "__typename": "SearchHome",
+            "property_id": "5279712209",
+            "listing_id": "2950124986",
+            "plan_id": null,
+            "status": "for_sale",
+            "list_price": 375000,
+            "last_sold_price": null,
+            "last_sold_date": null,
+            "primary_photo": {
+              "__typename": "Photo",
+              "href": "https://ap.rdcpix.com/7a225163e9c61349452464740cac7932l-m2088032839xd-w300_h300_q80.jpg"
+            },
+            "location": {
+              "__typename": "SearchHomeLocation",
+              "address": {
+                "__typename": "SearchHomeAddress",
+                "unit": null,
+                "line": "1090 Nw 136th St",
+                "street_number": null,
+                "street_name": "",
+                "city": "Miami",
+                "state": "Florida",
+                "state_code": "FL",
+                "postal_code": "33168",
+                "street_suffix": null,
+                "country": null,
+                "coordinate": {
+                  "__typename": "Coordinate",
+                  "lat": 25.898578,
+                  "lon": -80.217106
+                }
+              },
+              "street_view_url": ""
+            },
+            "description": {
+              "__typename": "SearchHomeDescription",
+              "beds": 2,
+              "baths_full_calc": 1,
+              "baths_partial_calc": null,
+              "baths": 1,
+              "sqft": 1020,
+              "beds_min": null,
+              "beds_max": null,
+              "baths_min": null,
+              "baths_max": null,
+              "baths_full": 1,
+              "baths_half": null,
+              "sqft_min": null,
+              "sqft_max": null,
+              "lot_sqft": null,
+              "type": null,
+              "sub_type": null,
+              "year_built": null,
+              "sold_price": null,
+              "text": null
+            },
+            "comparable_data": {
+              "__typename": "HomeComparableData",
+              "price": {
+                "__typename": "ComparableDataValue",
+                "percent": -16,
+                "absolute": -72000
+              },
+              "comparable_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": -5,
+                "absolute": -55
+              },
+              "comparable_lot_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": null,
+                "absolute": null
+              },
+              "year_built": {
+                "__typename": "ComparableDataAbsoluteValue",
+                "absolute": null
+              }
+            },
+            "list_price_min": null,
+            "list_price_max": null,
+            "href": "https://www.realtor.com/realestateandhomes-detail/1090-NW-136th-St_Miami_FL_33168_M52797-12209",
+            "permalink": "1090-NW-136th-St_Miami_FL_33168_M52797-12209",
+            "list_date": null,
+            "last_update_date": "2022-12-03T16:00:31Z",
+            "flags": {
+              "__typename": "HomeFlags",
+              "is_contingent": null,
+              "is_pending": null,
+              "is_price_reduced": true,
+              "is_new_listing": null,
+              "is_foreclosure": null
+            },
+            "photos": null,
+            "estimate": {
+              "__typename": "LatestEstimate",
+              "estimate": 381800
+            }
+          },
+          {
+            "__typename": "SearchHome",
+            "property_id": "5622409817",
+            "listing_id": "2947187670",
+            "plan_id": null,
+            "status": "for_sale",
+            "list_price": 450000,
+            "last_sold_price": null,
+            "last_sold_date": null,
+            "primary_photo": {
+              "__typename": "Photo",
+              "href": "https://ap.rdcpix.com/14c29ea3eea7ddbfb6c1ab318eb9499cl-m3394673794xd-w300_h300_q80.jpg"
+            },
+            "location": {
+              "__typename": "SearchHomeLocation",
+              "address": {
+                "__typename": "SearchHomeAddress",
+                "unit": null,
+                "line": "505 Nw 117th St",
+                "street_number": null,
+                "street_name": "",
+                "city": "Miami",
+                "state": "Florida",
+                "state_code": "FL",
+                "postal_code": "33168",
+                "street_suffix": null,
+                "country": null,
+                "coordinate": {
+                  "__typename": "Coordinate",
+                  "lat": 25.88268,
+                  "lon": -80.206677
+                }
+              },
+              "street_view_url": ""
+            },
+            "description": {
+              "__typename": "SearchHomeDescription",
+              "beds": 2,
+              "baths_full_calc": 1,
+              "baths_partial_calc": null,
+              "baths": 1,
+              "sqft": 1296,
+              "beds_min": null,
+              "beds_max": null,
+              "baths_min": null,
+              "baths_max": null,
+              "baths_full": 1,
+              "baths_half": null,
+              "sqft_min": null,
+              "sqft_max": null,
+              "lot_sqft": null,
+              "type": null,
+              "sub_type": null,
+              "year_built": null,
+              "sold_price": null,
+              "text": null
+            },
+            "comparable_data": {
+              "__typename": "HomeComparableData",
+              "price": {
+                "__typename": "ComparableDataValue",
+                "percent": 1,
+                "absolute": 3000
+              },
+              "comparable_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": 21,
+                "absolute": 221
+              },
+              "comparable_lot_sqft": {
+                "__typename": "ComparableDataValue",
+                "percent": null,
+                "absolute": null
+              },
+              "year_built": {
+                "__typename": "ComparableDataAbsoluteValue",
+                "absolute": null
+              }
+            },
+            "list_price_min": null,
+            "list_price_max": null,
+            "href": "https://www.realtor.com/realestateandhomes-detail/Miami_FL_33168_M56224-09817",
+            "permalink": "Miami_FL_33168_M56224-09817",
+            "list_date": null,
+            "last_update_date": "2022-12-22T16:09:20Z",
+            "flags": {
+              "__typename": "HomeFlags",
+              "is_contingent": null,
+              "is_pending": null,
+              "is_price_reduced": null,
+              "is_new_listing": null,
+              "is_foreclosure": null
+            },
+            "photos": null,
+            "estimate": {
+              "__typename": "LatestEstimate",
+              "estimate": 435700
+            }
+          }
+        ]
       }
     }
   }
+}

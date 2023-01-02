@@ -28,34 +28,26 @@ public class SimilarLisings {
          String query = req.getQueryString();
             String url = "https://realty-in-us.p.rapidapi.com/properties/v3/list-similar-homes?limit=10&property_"+query;
    
-        //    try {
+           try {
        
-        //            Thread.sleep(500);
-        //            var fileName = Path.of("/opt/tomcat/web-hometrest/ROOT/WEB-INF/classes/com/hometrest/MakeRequest/demo_similarListings.json");
-        //            var demo = Files.readString(fileName); 
-        //            var out = resp.getWriter();
-        //            out.println(demo);
+                   Thread.sleep(1000);
+                   var fileName = Path.of("/opt/tomcat/web-hometrest/ROOT/WEB-INF/classes/com/hometrest/MakeRequest/demo_similarListings.json");
+                   var demo = Files.readString(fileName); 
+                   var out = resp.getWriter();
+                   out.println(demo);
        
-        //    } catch (InterruptedException e) {
-        //            e.printStackTrace();
-        //       }
+           } catch (InterruptedException e) {
+                   e.printStackTrace();
+              }
                      
-       
-        //  var request = new Request();
-        //          try {
-        //            request.get(resp, url);
-        //          } catch (InterruptedException e) {
-        //            // TODO Auto-generated catch block
-        //            e.printStackTrace();
-        //           }
 
 
-        try {
-            get(resp, url);
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+        // try {
+        //     get(resp, url);
+        // } catch (InterruptedException e) {
+        //     // TODO Auto-generated catch block
+        //     e.printStackTrace();
+        // }
 
     }
 
